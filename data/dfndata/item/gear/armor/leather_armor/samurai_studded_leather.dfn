@@ -1,0 +1,94 @@
+// Studded Do - E/W
+[0x277c]
+{
+get=base_studded_do
+}
+
+// Studded Do - N/S
+[0x27c7]
+{
+get=0x277c
+id=0x27c7
+}
+
+// Studded Do - Alias
+[studdeddo]
+{
+get=0x277c 0x27c7
+}
+
+// Studded Hiro Sode - E/W
+[0x277f]
+{
+get=base_studded_hiro_sode
+}
+
+// Studded Hiro Sode - N/S
+[0x27ca]
+{
+get=0x277f
+id=0x27ca
+}
+
+// Studded Hiro Sode - Alias
+[studdedhirosode]
+{
+get=0x277f 0x27ca
+}
+
+// Studded Suneate - E/W
+[0x2787]
+{
+get=base_studded_suneate
+}
+
+// Studded Suneate - N/S
+[0x27d2]
+{
+get=0x2787
+id=0x27d2
+}
+
+// Studded Suneate - Alias
+[studdedsuneate]
+{
+get=0x2787 0x27d2
+}
+
+// Studded Haidate - N/S
+[0x278b]
+{
+get=base_studded_haidate
+}
+
+// Studded Haidate - E/W
+[0x27d6]
+{
+get=0x278b
+id=0x27d6
+}
+
+// Studded Haidate - Alias
+[studdedhaidate]
+{
+get=0x278b 0x27d6
+}
+
+// Studded Mempo - N/S
+[0x279d]
+{
+get=base_studded_mempo
+}
+
+// Studded Mempo - E/W
+[0x27e8]
+{
+get=0x279d
+id=0x27e8
+}
+
+// Studded Mempo - Alias
+[studdedmempo]
+{
+get=0x279d 0x27e8
+}

@@ -1,0 +1,114 @@
+// Leather Jingasa - N/S
+[0x2776]
+{
+get=base_leather_jingasa
+}
+
+// Leather Jingasa - E/W
+[0x27c1]
+{
+get=0x2776
+id=0x27c1
+}
+
+// Leather Jingasa - Alias
+[leatherjingasa]
+{
+get=0x2776 0x27c1
+}
+
+// Leather Mempo - N/S
+[0x277a]
+{
+get=base_leather_mempo
+}
+
+// Leather Mempo - E/W
+[0x27c5]
+{
+get=0x277a
+id=0x27c5
+}
+
+// Leather Mempo - Alias
+[leathermempo]
+{
+get=0x277a 0x27c5
+}
+
+// Leather Do - N/S
+[0x277b]
+{
+get=base_leather_do
+}
+
+// Leather Do - E/W
+[0x27c6]
+{
+get=0x277b
+id=0x27c6
+}
+
+// Leather Do - Alias
+[leatherdo]
+{
+get=0x277b 0x27c6
+}
+
+// Leather Hiro Sode - E/W
+[0x277e]
+{
+get=base_leather_hiro_sode
+}
+
+// Leather Hiro Sode - N/S
+[0x27c9]
+{
+get=0x277e
+id=0x27c9
+}
+
+// Leather Hiro Sode - Alias
+[leatherhirosode]
+{
+get=0x277e 0x27c9
+}
+
+// Leather Suneate - E/W
+[0x2786]
+{
+get=base_leather_suneate
+}
+
+// Leather Suneate - N/S
+[0x27d1]
+{
+get=0x2786
+id=0x27d1
+}
+
+// Leather Suneate - Alias
+[leathersuneate]
+{
+get=0x2786 0x27d1
+}
+
+// Leather Haidate - N/S
+[0x278a]
+{
+get=base_leather_haidate
+}
+
+// Leather Haidate - E/W
+[0x27d5]
+{
+get=0x278a
+id=0x27d5
+}
+
+// Leather Haidate - Alias
+[leatherhaidate]
+{
+get=0x278a 0x27d5
+}
+

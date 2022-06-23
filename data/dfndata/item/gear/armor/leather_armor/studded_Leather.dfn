@@ -1,0 +1,125 @@
+// Studded Sleeves - E/W
+[0x13d4]
+{
+get=base_studded_sleeves
+}
+
+// Studded Sleeves - N/S
+[0x13dc]
+{
+get=0x13d4
+id=0x13dc
+}
+
+// Studded Sleeves - Alias
+[studdedsleeves]
+{
+get=0x13d4 0x13dc
+}
+
+// Studded Gloves - E/W
+[0x13d5]
+{
+get=base_studded_gloves
+}
+
+// Studded Gloves - N/S
+[0x13dd]
+{
+get=0x13d5
+id=0x13dd
+}
+
+// Studded Gloves - Alias
+[studdedgloves]
+{
+get=0x13d5 0x13dd
+}
+
+// Studded Gorget
+[0x13d6]
+{
+get=base_studded_gorget
+}
+
+// Studded Gorget - Alias
+[studdedgorget]
+{
+get=0x13d6
+}
+
+// Studded Leggings - E/W
+[0x13da]
+{
+get=base_studded_leggings
+}
+
+// Studded Leggings - N/S
+[0x13e1]
+{
+get=0x13da
+id=0x13e1
+}
+
+// Studded Leggings - Alias
+[studdedleggings]
+{
+get=0x13da 0x13e1
+}
+
+// Studded Tunic - E/W
+[0x13db]
+{
+get=base_studded_tunic
+}
+
+// Studded Tunic - N/S
+[0x13e2]
+{
+get=0x13db
+id=0x13e2
+}
+
+// Studded Tunic - Alias
+[studdedtunic]
+{
+get=0x13db 0x13e2
+}
+
+// Studded Armor (Female) - E/W
+[0x1c02]
+{
+get=base_studded_armor
+}
+
+// Studded Armor (Female) - N/S
+[0x1c03]
+{
+get=0x1c02
+id=0x1c03
+}
+
+// Studded Armor (Female) - Alias
+[studdedarmor]
+{
+get=0x1c02 0x1c03
+}
+
+// Studded Bustier (Female) - E/W
+[0x1c0c]
+{
+get=base_studded_bustier
+}
+
+// Studded Bustier (Female) - N/S
+[0x1c0d]
+{
+get=0x1c0c
+id=0x1c0d
+}
+
+// Studded Bustier - Alias
+[studdedbustier]
+{
+get=0x1c0c 0x1c0d
+}

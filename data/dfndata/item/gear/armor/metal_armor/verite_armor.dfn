@@ -1,0 +1,463 @@
+// Ringmail
+
+// Verite Ringmail Tunic - N/S
+[0x13eb-ve]
+{
+get=base_ring_gloves
+color=0x89f
+}
+
+// Verite Ringmail Gloves - E/W
+[0x13f2-ve]
+{
+get=0x13eb-ve
+id=0x13f2
+}
+
+// Verite Ringmail Gloves - Alias
+[veriteringmailgloves]
+{
+get=0x13eb-ve 0x13f2-ve
+}
+
+// Verite Ringmail Tunic - N/S
+[0x13ec-ve]
+{ right facing
+get=base_ring_tunic
+color=0x89f
+}
+
+// Verite Ringmail Tunic - E/W
+[0x13ed-ve]
+{
+get=0x13ec-ve
+id=0x13ed
+}
+
+// Verite Ringmail Tunic - Alias
+[veriteringmailtunic]
+{
+get=0x13ec-ve 0x13ed-ve
+}
+
+// Verite Ringmail Sleeves - N/S
+[0x13ee-ve]
+{ right facing
+get=base_ring_sleeves
+color=0x89f
+}
+
+// Verite Ringmail Sleeves - E/W
+[0x13ef-ve]
+{
+get=0x13ee-ve
+id=0x13ef
+}
+
+// Verite Ringmail Sleeves - Alias
+[veriteringmailsleeves]
+{
+get=0x13ee-ve 0x13ef-ve
+}
+
+// Verite Ringmail Leggings - N/S
+[0x13f0-ve]
+{ right facing
+get=base_ring_leggings
+color=0x89f
+}
+
+// Verite Ringmail Leggings - E/W
+[0x13f1-ve]
+{
+get=0x13f0-ve
+id=0x13f1
+}
+
+// Verite Ringmail Leggings - Alias
+[veriteringmailleggings]
+{
+get=0x13f0-ve 0x13f1-ve
+}
+
+// Chainmail
+
+// Verite Chainmail Leggings - N/S
+[0x13be-ve]
+{
+get=base_chain_leggings
+color=0x89f
+}
+
+// Verite Chainmail Leggings - E/W
+[0x13c3-ve]
+{
+get=0x13be-ve
+id=0x13c3
+}
+
+// Verite Chainmail Leggings - Alias
+[veritechainmailleggings]
+{
+get=0x13be-ve 0x13c3-ve
+}
+
+// Verite Chainmail Tunic - N/S
+[0x13bf-ve]
+{
+get=base_chain_tunic
+color=0x89f
+}
+
+// Verite Chainmail Tunic - E/W
+[0x13c4-ve]
+{
+get=0x13bf-ve
+id=0x13c4
+}
+
+// Verite Chainmail Tunic - Alias
+[veritechainmailtunic]
+{
+get=0x13bf-ve 0x13c4-ve
+}
+
+// Verite Chainmail Coif - N/S
+[0x13BB-ve]
+{
+get=base_chain_coif
+color=0x89f
+}
+
+// Verite Chainmail Coif - E/W
+[0x13c0-ve]
+{
+get=0x13bb-ve
+id=0x13c0
+}
+
+// Verite Chainmail Coif - Alias
+[chainmailcoif]
+{
+get=0x13bb-ve 0x13c0-ve
+}
+
+// Female
+
+// Verite Female Plate - N/S
+[0x1c04-ve]
+{
+get=base_fem_plate
+color=0x89f
+}
+
+// Verite Female Plate - E/W
+[0x1c05-ve]
+{
+get=0x1c04-ve
+id=0x1c05
+}
+
+// Verite Female Plate - Alias
+[veritefemaleplate]
+{
+get=0x1c04-ve 0x1c05-ve
+}
+
+// platemail
+
+// Verite Platemail Arms - E/W
+[0x1410-ve]
+{
+get=base_plate_arms
+color=0x89f
+}
+
+// Verite Platemail Arms - N/S
+[0x1417-ve]
+{
+get=0x1410-ve
+id=0x1417
+}
+
+// Verite Platemail Arms - Alias
+[veriteplatemailarms]
+{
+get=0x1410-ve 0x1417-ve
+}
+
+// Verite Platemail Leggings - E/W
+[0x1411-ve]
+{
+get=base_plate_leggings
+color=0x89f
+}
+
+// Verite Platemail Leggings - N/S
+[0x141a-ve]
+{
+get=0x1411-ve
+id=0x141a
+}
+
+// Platemail Leggings - Alias
+[veriteplatemailleggings]
+{
+get=0x1411-ve 0x141a-ve
+}
+
+// Verite Platemail Gorget
+[0x1413-ve]
+{
+get=base_plate_gorget
+color=0x89f
+}
+
+// Verite Platemail Gorget - Alias
+[veriteplatemailgorget]
+{
+get=0x1413-ve
+}
+
+// Verite Platemail Gloves - E/W
+[0x1414-ve]
+{
+get=base_plate_gloves
+color=0x89f
+}
+
+// Verite Platemail Gloves - N/S
+[0x1418-ve]
+{
+get=0x1414-ve
+id=0x1418
+}
+
+// Verite Platemail Gloves - Alias
+[veriteplatemailgloves]
+{
+get=0x1414-ve 0x1418-ve
+}
+
+// Verite Platemail Chest - E/W
+[0x1415-ve]
+{
+get=base_plate_chest
+color=0x89f
+}
+
+// Verite Platemail Chest - N/S
+[0x1416-ve]
+{
+get=0x1415-ve
+id=0x1416
+}
+
+// Verite Platemail Chest - Alias
+[veriteplatemailchest]
+{
+get=0x1415-ve 0x1416-ve
+}
+
+// helmets
+
+// Verite Close Helm(et) - N/S
+[0x1408-ve]
+{
+get=base_close_helmet
+color=0x89f
+}
+
+// Verite Close Helm(et) - E/W
+[0x1409-ve]
+{
+get=0x1408-ve
+id=0x1409
+}
+
+// Verite Close Helm(et) - Alias
+[veriteclosehelm]
+{
+get=0x1408-ve 0x1409-ve
+}
+
+// Verite Helmet - N/S
+[0x140a-ve]
+{
+get=base_helmet
+color=0x89f
+}
+
+// Verite Helmet - E/W
+[0x140b-ve]
+{
+get=0x140a-ve
+id=0x140b
+}
+
+// Verite Helmet - Alias
+[veritehelmet]
+{
+get=0x140a-ve 0x140b-ve
+}
+
+// Verite Bascinet - N/S
+[0x140c-ve]
+{
+get=base_bascinet
+color=0x89f
+}
+
+// Verite Bascinet - E/W
+[0x140d-ve]
+{
+get=0x140c-ve
+id=0x140d
+}
+
+// Verite Bascinet - Alias
+[veritebascinet]
+{
+get=0x140c-ve 0x140d-ve
+}
+
+// Verite Norse Helm - N/S
+[0x140e-ve]
+{
+get=base_nose_helm
+color=0x89f
+}
+
+// Verite Norse Helm - E/W
+[0x140f-ve]
+{
+get=0x140e-ve
+id=0x140f
+}
+
+// Verite Norse Helm - Alias
+[veritenorsehelm]
+{
+get=0x140e-ve 0x140f-ve
+}
+
+// Verite Plate Helm - E/W
+[0x1412-ve]
+{
+get=base_plate_helm
+color=0x89f
+}
+
+// Verite Plate Helm - N/S
+[0x1419-ve]
+{
+get=0x1412-ve
+id=0x1419
+}
+
+// Verite Plate Helm - Alias
+[veriteplatehelm]
+{
+get=0x1412-ve 0x1419-ve
+}
+
+// Shields
+
+// Verite Verite Shield
+[0x1b72-ve]
+{
+get=base_verite_shield
+color=0x89f
+}
+
+// Verite Verite Shield - Alias
+[veriteveriteshield]
+{
+get=0x1b72-ve
+}
+
+// Verite Buckler
+[0x1b73-ve]
+{
+get=base_buckler
+color=0x89f
+}
+
+// Verite Buckler - Alias
+[veritebuckler]
+{
+get=0x1b73-ve
+}
+
+// Verite Metal Kite Shield - N/S
+[0x1b74-ve]
+{
+get=base_metal_kite_shield
+color=0x89f
+}
+
+// Verite Metal Kite Shield - E/W
+[0x1b75-ve]
+{
+get=0x1b74-ve
+id=0x1b75
+}
+
+// Metal Kite Shield - Alias
+[veritemetalkiteshield]
+{
+get=0x1b74-ve 0x1b75-ve
+}
+
+// Verite Heater Shield - N/S
+[0x1b76-ve]
+{
+get=base_heater_shield
+color=0x89f
+}
+
+// Verite Heater Shield - E/W
+[0x1b77-ve]
+{
+get=0x1b76-ve
+id=0x1b77
+}
+
+// Verite Heater Shield - Alias
+[veriteheatershield]
+{
+get=0x1b76-ve 0x1b77-ve
+}
+
+// Verite Metal Shield
+[0x1b7b-ve]
+{
+get=base_metal_shield
+color=0x89f
+}
+
+// Verite Metal Shield - Alias
+[veritemetalshield]
+{
+get=0x1b7b-ve
+}
+
+// Kite Shield (wooden) - N/S
+[0x1b78-ve]
+{
+get=base_wooden_kite_shield
+color=0x89f
+}
+
+// Kite Shield (wooden) - E/W
+[0x1b79-ve]
+{
+get=0x1b78-ve
+id=0x1b79
+}
+
+// Kite Shield (wooden) - Alias
+[veritewoodenkiteshield]
+{
+get=0x1b78-ve 0x1b79-ve
+}
