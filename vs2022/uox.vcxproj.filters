@@ -88,6 +88,9 @@
     <ClCompile Include="..\uox\configuration\uoxdata.cpp">
       <Filter>source\configuration</Filter>
     </ClCompile>
+    <ClCompile Include="..\uox\configuration\account.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\uox\uodata\artblock.hpp">
@@ -163,6 +166,9 @@
       <Filter>source\configuration</Filter>
     </ClInclude>
     <ClInclude Include="..\uox\configuration\uoxdata.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\account.hpp">
       <Filter>source\configuration</Filter>
     </ClInclude>
   </ItemGroup>

@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\uox\configuration\account.cpp" />
     <ClCompile Include="..\uox\configuration\dictionary.cpp" />
     <ClCompile Include="..\uox\configuration\dictsec.cpp" />
     <ClCompile Include="..\uox\configuration\mapdef.cpp" />
@@ -36,6 +37,7 @@
     <ClCompile Include="..\uox\utility\strutil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\uox\configuration\account.hpp" />
     <ClInclude Include="..\uox\configuration\dictionary.hpp" />
     <ClInclude Include="..\uox\configuration\dictsec.hpp" />
     <ClInclude Include="..\uox\configuration\mapdef.hpp" />
