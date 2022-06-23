@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{c533fc26-fc44-49e0-ae17-d758b155187e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\configuration">
+      <UniqueIdentifier>{a10bc08f-7cca-44e5-9a62-8e2c0f5383a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\uodata">
+      <UniqueIdentifier>{85df4bc3-8cc9-4922-bc04-b40c90306b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utility">
+      <UniqueIdentifier>{f64169b9-1e0a-49b0-b91b-29216bc0d8ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\uox\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\artblock.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\multicollection.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\terrainblock.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\tiledata.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\ultimamap.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\uopfile.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\uoworld.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\utility\bytebuffer.cpp">
+      <Filter>source\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\utility\console.cpp">
+      <Filter>source\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\utility\ip4addr.cpp">
+      <Filter>source\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\utility\secparser.cpp">
+      <Filter>source\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\utility\socket.cpp">
+      <Filter>source\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\utility\strutil.cpp">
+      <Filter>source\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\dictionary.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\dictsec.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\mapdef.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\secgroup.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\section.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\servcfg.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\shardcfg.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\uoxcfg.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\configuration\uoxdata.cpp">
+      <Filter>source\configuration</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\uox\uodata\artblock.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\multicollection.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\terrainblock.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\tiledata.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\tileinfo.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\ultimamap.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\uopfile.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\uoworld.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\bytebuffer.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\console.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\ip4addr.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\random.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\secparser.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\socket.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\strutil.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\utility\thread_pool.hpp">
+      <Filter>source\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\dictionary.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\dictsec.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\mapdef.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\secgroup.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\section.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\servcfg.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\shardcfg.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\uoxcfg.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\configuration\uoxdata.hpp">
+      <Filter>source\configuration</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

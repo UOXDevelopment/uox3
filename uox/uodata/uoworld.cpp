@@ -208,7 +208,7 @@ auto uoworld::processMap(ultimamap &map,const mapdef_t &entry, const std::filesy
 		rvalue = map.loadUOPTerrainFile(uop.string()) ;
 	}
 	if (!rvalue) {
-		rvalue = map.loadMulTerrainFile(uodir / entry.mappath) ;
+		rvalue = map.loadMulTerrainFile((uodir / entry.mappath).string()) ;
 	}
 	if (rvalue) {
 		rvalue = map.loadArt((uodir / entry.stamul).string(), (uodir /entry.staidx).string());

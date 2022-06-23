@@ -29,7 +29,7 @@ auto shardcfg::load(const std::filesystem::path &shardpath) ->bool {
 	auto rvalue = true  ;
 	for (const auto &[index,loc]:baseshardloc){
 		auto path = shardpath / loc ;
-		paths[index] = path ;
+		paths[static_cast<int>(index)] = path ;
 		if (!std::filesystem::exists(path)){
 			if (!std::filesystem::create_directories(path)){
 				rvalue = false ;
