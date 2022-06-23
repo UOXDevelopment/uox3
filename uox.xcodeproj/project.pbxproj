@@ -31,6 +31,7 @@
 		641570D628635E7500156347 /* mapdef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570D428635E7500156347 /* mapdef.cpp */; };
 		641570D92863CF2F00156347 /* servcfg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570D72863CF2F00156347 /* servcfg.cpp */; };
 		641570DC2864897300156347 /* shardcfg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570DA2864897300156347 /* shardcfg.cpp */; };
+		641570DF2864C2B600156347 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570DD2864C2B600156347 /* account.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,6 +97,8 @@
 		641570D82863CF2F00156347 /* servcfg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = servcfg.hpp; sourceTree = "<group>"; };
 		641570DA2864897300156347 /* shardcfg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shardcfg.cpp; sourceTree = "<group>"; };
 		641570DB2864897300156347 /* shardcfg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shardcfg.hpp; sourceTree = "<group>"; };
+		641570DD2864C2B600156347 /* account.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = account.cpp; sourceTree = "<group>"; };
+		641570DE2864C2B600156347 /* account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = account.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				641570D82863CF2F00156347 /* servcfg.hpp */,
 				641570DA2864897300156347 /* shardcfg.cpp */,
 				641570DB2864897300156347 /* shardcfg.hpp */,
+				641570DD2864C2B600156347 /* account.cpp */,
+				641570DE2864C2B600156347 /* account.hpp */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				641570AA286218B000156347 /* section.cpp in Sources */,
+				641570DF2864C2B600156347 /* account.cpp in Sources */,
 				641570BE28623B4500156347 /* multicollection.cpp in Sources */,
 				641570862861F8CD00156347 /* main.cpp in Sources */,
 				641570D92863CF2F00156347 /* servcfg.cpp in Sources */,

@@ -12,6 +12,7 @@
 #include "dictionary.hpp"
 #include "mapdef.hpp"
 #include "uoworld.hpp"
+#include "account.hpp"
 //===========================================================================================
 //	Forward declares
 //===========================================================================================
@@ -82,6 +83,11 @@ int main(int argc, const char * argv[]) {
 		return EXIT_FAILURE ;
 	}
 	std::cout <<"Loaded " << uomaps.size() << " maps" << std::endl;
+	
+	//=====================================================================
+	// setup accounts
+	//====================================================================
+	auto Account = account_t(shardsetup.paths[static_cast<int>(shardpaths::account)]);
 	return EXIT_SUCCESS;
 }
 
