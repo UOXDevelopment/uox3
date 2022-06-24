@@ -113,6 +113,9 @@
 		6415713A28660ECD00156347 /* uomap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uomap.cpp; sourceTree = "<group>"; };
 		6415713B28660ECD00156347 /* terrainblock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = terrainblock.hpp; sourceTree = "<group>"; };
 		6415713C28660ECD00156347 /* artblock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = artblock.cpp; sourceTree = "<group>"; };
+		641571452866135E00156347 /* uox.sln */ = {isa = PBXFileReference; lastKnownFileType = text; name = uox.sln; path = vs2022/uox.sln; sourceTree = "<group>"; };
+		641571462866135E00156347 /* uox.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = uox.vcxproj.filters; path = vs2022/uox.vcxproj.filters; sourceTree = "<group>"; };
+		641571472866135E00156347 /* uox.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = uox.vcxproj; path = vs2022/uox.vcxproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 		641570792861F8CD00156347 = {
 			isa = PBXGroup;
 			children = (
+				641571442866133C00156347 /* vs2022 */,
 				641570842861F8CD00156347 /* uox */,
 				641570832861F8CD00156347 /* Products */,
 				641570C228623BA500156347 /* Frameworks */,
@@ -264,6 +268,16 @@
 			children = (
 			);
 			path = "world&function";
+			sourceTree = "<group>";
+		};
+		641571442866133C00156347 /* vs2022 */ = {
+			isa = PBXGroup;
+			children = (
+				641571452866135E00156347 /* uox.sln */,
+				641571472866135E00156347 /* uox.vcxproj */,
+				641571462866135E00156347 /* uox.vcxproj.filters */,
+			);
+			name = vs2022;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
