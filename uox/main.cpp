@@ -24,7 +24,6 @@ auto parseArgs(int argc,const char *argv[]) ->std::vector<std::string> ;
 //  main program
 //===========================================================================================
 int main(int argc, const char * argv[]) {
-	std::cout << "Current directory is " << std::filesystem::current_path().string() << std::endl;
 	auto configfile = std::string("uox.cfg");
 	auto arguments = parseArgs(argc, argv) ;
 	if (!arguments.empty()) {
