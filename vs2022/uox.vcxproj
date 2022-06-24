@@ -22,13 +22,16 @@
     <ClCompile Include="..\uox\configuration\uoxcfg.cpp" />
     <ClCompile Include="..\uox\configuration\uoxdata.cpp" />
     <ClCompile Include="..\uox\main.cpp" />
+    <ClCompile Include="..\uox\network\packet.cpp" />
     <ClCompile Include="..\uox\uodata\artblock.cpp" />
     <ClCompile Include="..\uox\uodata\multicollection.cpp" />
     <ClCompile Include="..\uox\uodata\terrainblock.cpp" />
-    <ClCompile Include="..\uox\uodata\tiledata.cpp" />
-    <ClCompile Include="..\uox\uodata\ultimamap.cpp" />
+    <ClCompile Include="..\uox\uodata\tileinfo.cpp" />
+    <ClCompile Include="..\uox\uodata\ultima_types.cpp" />
+    <ClCompile Include="..\uox\uodata\uomap.cpp" />
     <ClCompile Include="..\uox\uodata\uopfile.cpp" />
     <ClCompile Include="..\uox\uodata\uoworld.cpp" />
+    <ClCompile Include="..\uox\uoxtype.cpp" />
     <ClCompile Include="..\uox\utility\bytebuffer.cpp" />
     <ClCompile Include="..\uox\utility\console.cpp" />
     <ClCompile Include="..\uox\utility\ip4addr.cpp" />
@@ -47,14 +50,16 @@
     <ClInclude Include="..\uox\configuration\shardcfg.hpp" />
     <ClInclude Include="..\uox\configuration\uoxcfg.hpp" />
     <ClInclude Include="..\uox\configuration\uoxdata.hpp" />
+    <ClInclude Include="..\uox\network\packet.hpp" />
     <ClInclude Include="..\uox\uodata\artblock.hpp" />
     <ClInclude Include="..\uox\uodata\multicollection.hpp" />
     <ClInclude Include="..\uox\uodata\terrainblock.hpp" />
-    <ClInclude Include="..\uox\uodata\tiledata.hpp" />
     <ClInclude Include="..\uox\uodata\tileinfo.hpp" />
-    <ClInclude Include="..\uox\uodata\ultimamap.hpp" />
+    <ClInclude Include="..\uox\uodata\ultima_types.hpp" />
+    <ClInclude Include="..\uox\uodata\uomap.hpp" />
     <ClInclude Include="..\uox\uodata\uopfile.hpp" />
     <ClInclude Include="..\uox\uodata\uoworld.hpp" />
+    <ClInclude Include="..\uox\uoxtype.hpp" />
     <ClInclude Include="..\uox\utility\bytebuffer.hpp" />
     <ClInclude Include="..\uox\utility\console.hpp" />
     <ClInclude Include="..\uox\utility\ip4addr.hpp" />
@@ -110,7 +115,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <AdditionalIncludeDirectories>..\uox\configuration;..\uox\uodata;..\uox\utility;..\zlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\uox\configuration;..\uox\uodata;..\uox\utility;..\uox;..\zlib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +133,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <AdditionalIncludeDirectories>..\uox\configuration;..\uox\uodata;..\uox\utility;..\zlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\uox\configuration;..\uox\uodata;..\uox\utility;..\uox;..\zlib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

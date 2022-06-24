@@ -17,6 +17,9 @@
     <Filter Include="source\utility">
       <UniqueIdentifier>{f64169b9-1e0a-49b0-b91b-29216bc0d8ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\network">
+      <UniqueIdentifier>{ada7c3cc-d27c-486d-9522-d120f6003fdb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\uox\main.cpp">
@@ -29,12 +32,6 @@
       <Filter>source\uodata</Filter>
     </ClCompile>
     <ClCompile Include="..\uox\uodata\terrainblock.cpp">
-      <Filter>source\uodata</Filter>
-    </ClCompile>
-    <ClCompile Include="..\uox\uodata\tiledata.cpp">
-      <Filter>source\uodata</Filter>
-    </ClCompile>
-    <ClCompile Include="..\uox\uodata\uomap.cpp">
       <Filter>source\uodata</Filter>
     </ClCompile>
     <ClCompile Include="..\uox\uodata\uopfile.cpp">
@@ -91,6 +88,21 @@
     <ClCompile Include="..\uox\configuration\account.cpp">
       <Filter>source\configuration</Filter>
     </ClCompile>
+    <ClCompile Include="..\uox\uodata\ultima_types.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\tileinfo.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uodata\uomap.cpp">
+      <Filter>source\uodata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\network\packet.cpp">
+      <Filter>source\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uox\uoxtype.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\uox\uodata\artblock.hpp">
@@ -102,13 +114,7 @@
     <ClInclude Include="..\uox\uodata\terrainblock.hpp">
       <Filter>source\uodata</Filter>
     </ClInclude>
-    <ClInclude Include="..\uox\uodata\tiledata.hpp">
-      <Filter>source\uodata</Filter>
-    </ClInclude>
     <ClInclude Include="..\uox\uodata\tileinfo.hpp">
-      <Filter>source\uodata</Filter>
-    </ClInclude>
-    <ClInclude Include="..\uox\uodata\uomap.hpp">
       <Filter>source\uodata</Filter>
     </ClInclude>
     <ClInclude Include="..\uox\uodata\uopfile.hpp">
@@ -170,6 +176,18 @@
     </ClInclude>
     <ClInclude Include="..\uox\configuration\account.hpp">
       <Filter>source\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\ultima_types.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uodata\uomap.hpp">
+      <Filter>source\uodata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\network\packet.hpp">
+      <Filter>source\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uox\uoxtype.hpp">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
