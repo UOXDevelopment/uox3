@@ -49,8 +49,11 @@ struct acct_entry {
 // account_t
 //====================================================================================================
 class account_t : public secparser {
-	bool insection ;
+
 	acct_entry tempacct ;
+	enum acctsectype {invalid, acct,addition};
+	acctsectype processing;
+	
 	std::filesystem::path acctfile ;
 	std::map<int,acct_entry> accounts ;
 	auto header(std::ostream &output) const ->void ;
@@ -59,6 +62,8 @@ class account_t : public secparser {
 	auto startSection(const std::string &secline)->void final;
 	auto keyvalue(const std::string &key, const std::string &value)->void final;
 	auto endSection() ->void final;
+	auto addAccount(const std::string &key , const std::string &value)->void ;
+	auto processAccount(const std::string &key, const std::string &value) -> void;
 
 public:
 	mutable bool changed ;

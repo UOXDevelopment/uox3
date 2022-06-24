@@ -131,7 +131,7 @@ auto account_t::load(const std::filesystem::path &acctdir) ->bool {
 	if (!std::filesystem::exists(path)) {
 		writeDefault(path);
 	}
-	insection = false ;
+	processing = invalid;
 	rvalue = processFile(path) ;
 	changed = false ;
 	acctfile = path ;
@@ -148,11 +148,30 @@ auto account_t::startSection(const std::string &secline)->void {
 		else {
 			tempacct = acct_entry(accountNumber()+1,0) ;
 		}
-		insection = true ;
+		processing = acct ;
+	}
+	else if (sec == "create"){
+		processing = addition;
+	}
+	else {
+		processing = invalid;
 	}
 }
 //====================================================================================================
 auto account_t::keyvalue(const std::string &key, const std::string &value)->void {
+	switch (processing){
+		case acct:
+			processAccount(key, value);
+			break;
+		case addition:
+			addAccount(key, value);
+			break;
+		default:
+			break;
+	}
+}
+//====================================================================================================
+auto account_t::processAccount(const std::string &key, const std::string &value) ->void {
 	auto lkey = strutil::lower(key) ;
 	if (lkey == "username"){
 		tempacct.username = value ;
@@ -180,11 +199,39 @@ auto account_t::keyvalue(const std::string &key, const std::string &value)->void
 	}
 }
 //====================================================================================================
-auto account_t::endSection() ->void {
-	if (insection) {
-		accounts.insert_or_assign(tempacct.acctnum,tempacct);
-		insection = false ;
+auto account_t::addAccount(const std::string &key , const std::string &value)->void {
+	auto lkey = strutil::lower(key) ;
+	if (lkey == "add") {
+		auto values = strutil::parse(value,",") ;
+		auto username = std::string();
+		auto password = std::string() ;
+		auto flags = 0 ;
+		switch (values.size()){
+			default:
+			case 3:
+				flags = strutil::ston<int>(values[2]);
+				[[fallthrough]];
+			case 2:
+				password = values[1] ;
+				[[fallthrough]] ;
+			case 1:
+				username = values[0];
+				[[fallthrough]];
+			case 0:
+				break;
+		}
+		if (!username.empty()) {
+			add(username,password,flags);
+		}
+		
 	}
+}
+//====================================================================================================
+auto account_t::endSection() ->void {
+	if (processing == acct) {
+		accounts.insert_or_assign(tempacct.acctnum,tempacct);
+	}
+	processing = invalid;
 }
 
 

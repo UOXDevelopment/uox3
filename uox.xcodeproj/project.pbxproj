@@ -17,11 +17,6 @@
 		641570A528620AF500156347 /* console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570A428620AF500156347 /* console.cpp */; };
 		641570AA286218B000156347 /* section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570A8286218B000156347 /* section.cpp */; };
 		641570AD28622BEB00156347 /* secgroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570AB28622BEA00156347 /* secgroup.cpp */; };
-		641570BC28623B4500156347 /* terrainblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570AF28623B4500156347 /* terrainblock.cpp */; };
-		641570BD28623B4500156347 /* artblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570B228623B4500156347 /* artblock.cpp */; };
-		641570BE28623B4500156347 /* multicollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570B428623B4500156347 /* multicollection.cpp */; };
-		641570BF28623B4500156347 /* ultimamap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570B528623B4500156347 /* ultimamap.cpp */; };
-		641570C028623B4500156347 /* tiledata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570B628623B4500156347 /* tiledata.cpp */; };
 		641570C128623B4500156347 /* uopfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570B828623B4500156347 /* uopfile.cpp */; };
 		641570C428623BAD00156347 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 641570C328623BA500156347 /* libz.tbd */; };
 		641570C728623C0100156347 /* uoxdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570C528623C0100156347 /* uoxdata.cpp */; };
@@ -32,6 +27,10 @@
 		641570D92863CF2F00156347 /* servcfg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570D72863CF2F00156347 /* servcfg.cpp */; };
 		641570DC2864897300156347 /* shardcfg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570DA2864897300156347 /* shardcfg.cpp */; };
 		641570DF2864C2B600156347 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570DD2864C2B600156347 /* account.cpp */; };
+		641570E32865CE5400156347 /* packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E12865CE5400156347 /* packet.cpp */; };
+		641570E72865CF1100156347 /* objfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E52865CF1100156347 /* objfactory.cpp */; };
+		641570EA2865CFFC00156347 /* uoxtype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E82865CFFC00156347 /* uoxtype.cpp */; };
+		641570ED2865D11300156347 /* baseobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570EB2865D11300156347 /* baseobject.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,18 +68,7 @@
 		641570A9286218B000156347 /* section.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = section.hpp; sourceTree = "<group>"; };
 		641570AB28622BEA00156347 /* secgroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = secgroup.cpp; sourceTree = "<group>"; };
 		641570AC28622BEB00156347 /* secgroup.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = secgroup.hpp; sourceTree = "<group>"; };
-		641570AF28623B4500156347 /* terrainblock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = terrainblock.cpp; sourceTree = "<group>"; };
-		641570B028623B4500156347 /* tileinfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tileinfo.hpp; sourceTree = "<group>"; };
-		641570B128623B4500156347 /* ultimamap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ultimamap.hpp; sourceTree = "<group>"; };
-		641570B228623B4500156347 /* artblock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = artblock.cpp; sourceTree = "<group>"; };
-		641570B328623B4500156347 /* terrainblock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = terrainblock.hpp; sourceTree = "<group>"; };
-		641570B428623B4500156347 /* multicollection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multicollection.cpp; sourceTree = "<group>"; };
-		641570B528623B4500156347 /* ultimamap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ultimamap.cpp; sourceTree = "<group>"; };
-		641570B628623B4500156347 /* tiledata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiledata.cpp; sourceTree = "<group>"; };
-		641570B728623B4500156347 /* multicollection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = multicollection.hpp; sourceTree = "<group>"; };
 		641570B828623B4500156347 /* uopfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uopfile.cpp; sourceTree = "<group>"; };
-		641570B928623B4500156347 /* tiledata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tiledata.hpp; sourceTree = "<group>"; };
-		641570BA28623B4500156347 /* artblock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = artblock.hpp; sourceTree = "<group>"; };
 		641570BB28623B4500156347 /* uopfile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = uopfile.hpp; sourceTree = "<group>"; };
 		641570C328623BA500156347 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		641570C528623C0100156347 /* uoxdata.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = uoxdata.cpp; sourceTree = "<group>"; };
@@ -99,6 +87,14 @@
 		641570DB2864897300156347 /* shardcfg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shardcfg.hpp; sourceTree = "<group>"; };
 		641570DD2864C2B600156347 /* account.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = account.cpp; sourceTree = "<group>"; };
 		641570DE2864C2B600156347 /* account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = account.hpp; sourceTree = "<group>"; };
+		641570E12865CE5400156347 /* packet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = packet.cpp; sourceTree = "<group>"; };
+		641570E22865CE5400156347 /* packet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = packet.hpp; sourceTree = "<group>"; };
+		641570E52865CF1100156347 /* objfactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = objfactory.cpp; sourceTree = "<group>"; };
+		641570E62865CF1100156347 /* objfactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = objfactory.hpp; sourceTree = "<group>"; };
+		641570E82865CFFC00156347 /* uoxtype.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = uoxtype.cpp; sourceTree = "<group>"; };
+		641570E92865CFFC00156347 /* uoxtype.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = uoxtype.hpp; sourceTree = "<group>"; };
+		641570EB2865D11300156347 /* baseobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = baseobject.cpp; sourceTree = "<group>"; };
+		641570EC2865D11300156347 /* baseobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = baseobject.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +129,15 @@
 		641570842861F8CD00156347 /* uox */ = {
 			isa = PBXGroup;
 			children = (
+				641570EE2865D37800156347 /* world&function */,
+				641570E42865CEED00156347 /* objects */,
+				641570E02865CDA200156347 /* network */,
 				641570AE28623B1900156347 /* uodata */,
 				6415709F2861FF5C00156347 /* configuration */,
 				6415708C2861F8FE00156347 /* utility */,
 				641570852861F8CD00156347 /* main.cpp */,
+				641570E82865CFFC00156347 /* uoxtype.cpp */,
+				641570E92865CFFC00156347 /* uoxtype.hpp */,
 			);
 			path = uox;
 			sourceTree = "<group>";
@@ -192,17 +193,6 @@
 		641570AE28623B1900156347 /* uodata */ = {
 			isa = PBXGroup;
 			children = (
-				641570B228623B4500156347 /* artblock.cpp */,
-				641570BA28623B4500156347 /* artblock.hpp */,
-				641570B428623B4500156347 /* multicollection.cpp */,
-				641570B728623B4500156347 /* multicollection.hpp */,
-				641570AF28623B4500156347 /* terrainblock.cpp */,
-				641570B328623B4500156347 /* terrainblock.hpp */,
-				641570B628623B4500156347 /* tiledata.cpp */,
-				641570B928623B4500156347 /* tiledata.hpp */,
-				641570B028623B4500156347 /* tileinfo.hpp */,
-				641570B528623B4500156347 /* ultimamap.cpp */,
-				641570B128623B4500156347 /* ultimamap.hpp */,
 				641570B828623B4500156347 /* uopfile.cpp */,
 				641570BB28623B4500156347 /* uopfile.hpp */,
 				641570D128635B6100156347 /* uoworld.cpp */,
@@ -217,6 +207,33 @@
 				641570C328623BA500156347 /* libz.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		641570E02865CDA200156347 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				641570E12865CE5400156347 /* packet.cpp */,
+				641570E22865CE5400156347 /* packet.hpp */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		641570E42865CEED00156347 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				641570E52865CF1100156347 /* objfactory.cpp */,
+				641570E62865CF1100156347 /* objfactory.hpp */,
+				641570EB2865D11300156347 /* baseobject.cpp */,
+				641570EC2865D11300156347 /* baseobject.hpp */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		641570EE2865D37800156347 /* world&function */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "world&function";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,29 +295,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				641570AA286218B000156347 /* section.cpp in Sources */,
+				641570E32865CE5400156347 /* packet.cpp in Sources */,
 				641570DF2864C2B600156347 /* account.cpp in Sources */,
-				641570BE28623B4500156347 /* multicollection.cpp in Sources */,
 				641570862861F8CD00156347 /* main.cpp in Sources */,
 				641570D92863CF2F00156347 /* servcfg.cpp in Sources */,
 				6415709A2861F93300156347 /* ip4addr.cpp in Sources */,
-				641570BF28623B4500156347 /* ultimamap.cpp in Sources */,
 				641570952861F91F00156347 /* bytebuffer.cpp in Sources */,
 				641570D02862602100156347 /* dictsec.cpp in Sources */,
 				641570942861F91F00156347 /* secparser.cpp in Sources */,
 				641570AD28622BEB00156347 /* secgroup.cpp in Sources */,
 				6415709B2861F93300156347 /* socket.cpp in Sources */,
-				641570BD28623B4500156347 /* artblock.cpp in Sources */,
+				641570ED2865D11300156347 /* baseobject.cpp in Sources */,
 				641570D328635B6100156347 /* uoworld.cpp in Sources */,
 				641570C128623B4500156347 /* uopfile.cpp in Sources */,
 				641570DC2864897300156347 /* shardcfg.cpp in Sources */,
 				641570932861F91F00156347 /* strutil.cpp in Sources */,
-				641570BC28623B4500156347 /* terrainblock.cpp in Sources */,
 				641570A22861FF7500156347 /* uoxcfg.cpp in Sources */,
+				641570E72865CF1100156347 /* objfactory.cpp in Sources */,
 				641570CD2862600100156347 /* dictionary.cpp in Sources */,
 				641570C728623C0100156347 /* uoxdata.cpp in Sources */,
 				641570A528620AF500156347 /* console.cpp in Sources */,
 				641570D628635E7500156347 /* mapdef.cpp in Sources */,
-				641570C028623B4500156347 /* tiledata.cpp in Sources */,
+				641570EA2865CFFC00156347 /* uoxtype.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
