@@ -29,6 +29,8 @@ using flag_t = std::uint64_t ;
 using layer_t = std::int32_t ;
 using altitude_t = std::int32_t ;
 
+using coord_t = std::int32_t ;
+
 constexpr auto invalid_tile = 0xFFFF ;
 constexpr auto invalid_texture = 0xffff ;
 

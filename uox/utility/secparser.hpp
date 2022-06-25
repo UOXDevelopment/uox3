@@ -18,6 +18,8 @@ protected:
 	virtual auto openFile(const std::filesystem::path &path) ->void ;
 
 public:
+	secparser() =default ;
+	virtual ~secparser() = default ;
 	auto processFile(const std::string &filepath) ->bool ;
 	auto processFile(const std::filesystem::path &filepath) ->bool ;
 	auto processDirectory(const std::filesystem::path &dirpath, const std::string &extension = ".dfn") ->bool ;

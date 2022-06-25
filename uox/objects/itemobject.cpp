@@ -1,10 +1,11 @@
 //Copyright © 2022 Charles Kerr. All rights reserved.
 
-#ifndef objfactory_hpp
-#define objfactory_hpp
+#include "itemobject.hpp"
 
-#include <cstdint>
-#include <string>
+#include <iostream>
+
 //====================================================================================================
+itemobject_t::itemobject_t() :baseobject_t(){
+	type = objtype_t::item ;
+}
 
-#endif /* objfactory_hpp */

@@ -14,6 +14,8 @@
 #include <type_traits>
 #include <system_error>
 #include <ostream>
+#include <cctype>
+
 #if defined(_WIN32)
 #if defined(max)
 #undef max

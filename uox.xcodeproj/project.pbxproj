@@ -27,7 +27,7 @@
 		641570DC2864897300156347 /* shardcfg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570DA2864897300156347 /* shardcfg.cpp */; };
 		641570DF2864C2B600156347 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570DD2864C2B600156347 /* account.cpp */; };
 		641570E32865CE5400156347 /* packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E12865CE5400156347 /* packet.cpp */; };
-		641570E72865CF1100156347 /* objfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E52865CF1100156347 /* objfactory.cpp */; };
+		641570E72865CF1100156347 /* objectfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E52865CF1100156347 /* objectfactory.cpp */; };
 		641570EA2865CFFC00156347 /* uoxtype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570E82865CFFC00156347 /* uoxtype.cpp */; };
 		641570ED2865D11300156347 /* baseobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641570EB2865D11300156347 /* baseobject.cpp */; };
 		6415713D28660ECD00156347 /* ultima_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6415713228660ECD00156347 /* ultima_types.cpp */; };
@@ -37,6 +37,13 @@
 		6415714128660ECD00156347 /* multicollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6415713828660ECD00156347 /* multicollection.cpp */; };
 		6415714228660ECD00156347 /* uomap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6415713A28660ECD00156347 /* uomap.cpp */; };
 		6415714328660ECD00156347 /* artblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6415713C28660ECD00156347 /* artblock.cpp */; };
+		641E646828663F490066121E /* shardblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641E646628663F490066121E /* shardblock.cpp */; };
+		64708E69286749D000D7975D /* itemobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E67286749D000D7975D /* itemobject.cpp */; };
+		64708E6C28674A3500D7975D /* multiobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E6A28674A3500D7975D /* multiobject.cpp */; };
+		64708E6F28674A6000D7975D /* mobobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E6D28674A6000D7975D /* mobobject.cpp */; };
+		64708E7228674A9700D7975D /* charobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7028674A9700D7975D /* charobject.cpp */; };
+		64708E7528674AFD00D7975D /* boatobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7328674AFD00D7975D /* boatobject.cpp */; };
+		64708E7828674B3B00D7975D /* spawnobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7628674B3B00D7975D /* spawnobject.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,8 +100,8 @@
 		641570DE2864C2B600156347 /* account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = account.hpp; sourceTree = "<group>"; };
 		641570E12865CE5400156347 /* packet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = packet.cpp; sourceTree = "<group>"; };
 		641570E22865CE5400156347 /* packet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = packet.hpp; sourceTree = "<group>"; };
-		641570E52865CF1100156347 /* objfactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = objfactory.cpp; sourceTree = "<group>"; };
-		641570E62865CF1100156347 /* objfactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = objfactory.hpp; sourceTree = "<group>"; };
+		641570E52865CF1100156347 /* objectfactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = objectfactory.cpp; sourceTree = "<group>"; };
+		641570E62865CF1100156347 /* objectfactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = objectfactory.hpp; sourceTree = "<group>"; };
 		641570E82865CFFC00156347 /* uoxtype.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = uoxtype.cpp; sourceTree = "<group>"; };
 		641570E92865CFFC00156347 /* uoxtype.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = uoxtype.hpp; sourceTree = "<group>"; };
 		641570EB2865D11300156347 /* baseobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = baseobject.cpp; sourceTree = "<group>"; };
@@ -116,6 +123,20 @@
 		641571452866135E00156347 /* uox.sln */ = {isa = PBXFileReference; lastKnownFileType = text; name = uox.sln; path = vs2022/uox.sln; sourceTree = "<group>"; };
 		641571462866135E00156347 /* uox.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = uox.vcxproj.filters; path = vs2022/uox.vcxproj.filters; sourceTree = "<group>"; };
 		641571472866135E00156347 /* uox.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = uox.vcxproj; path = vs2022/uox.vcxproj; sourceTree = "<group>"; };
+		641E646628663F490066121E /* shardblock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shardblock.cpp; sourceTree = "<group>"; };
+		641E646728663F490066121E /* shardblock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shardblock.hpp; sourceTree = "<group>"; };
+		64708E67286749D000D7975D /* itemobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemobject.cpp; sourceTree = "<group>"; };
+		64708E68286749D000D7975D /* itemobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = itemobject.hpp; sourceTree = "<group>"; };
+		64708E6A28674A3500D7975D /* multiobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = multiobject.cpp; sourceTree = "<group>"; };
+		64708E6B28674A3500D7975D /* multiobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = multiobject.hpp; sourceTree = "<group>"; };
+		64708E6D28674A6000D7975D /* mobobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mobobject.cpp; sourceTree = "<group>"; };
+		64708E6E28674A6000D7975D /* mobobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mobobject.hpp; sourceTree = "<group>"; };
+		64708E7028674A9700D7975D /* charobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = charobject.cpp; sourceTree = "<group>"; };
+		64708E7128674A9700D7975D /* charobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = charobject.hpp; sourceTree = "<group>"; };
+		64708E7328674AFD00D7975D /* boatobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boatobject.cpp; sourceTree = "<group>"; };
+		64708E7428674AFD00D7975D /* boatobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = boatobject.hpp; sourceTree = "<group>"; };
+		64708E7628674B3B00D7975D /* spawnobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = spawnobject.cpp; sourceTree = "<group>"; };
+		64708E7728674B3B00D7975D /* spawnobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = spawnobject.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,10 +276,24 @@
 		641570E42865CEED00156347 /* objects */ = {
 			isa = PBXGroup;
 			children = (
-				641570E52865CF1100156347 /* objfactory.cpp */,
-				641570E62865CF1100156347 /* objfactory.hpp */,
+				641570E52865CF1100156347 /* objectfactory.cpp */,
+				641570E62865CF1100156347 /* objectfactory.hpp */,
 				641570EB2865D11300156347 /* baseobject.cpp */,
 				641570EC2865D11300156347 /* baseobject.hpp */,
+				64708E67286749D000D7975D /* itemobject.cpp */,
+				64708E68286749D000D7975D /* itemobject.hpp */,
+				64708E6A28674A3500D7975D /* multiobject.cpp */,
+				64708E6B28674A3500D7975D /* multiobject.hpp */,
+				64708E6D28674A6000D7975D /* mobobject.cpp */,
+				64708E6E28674A6000D7975D /* mobobject.hpp */,
+				64708E7028674A9700D7975D /* charobject.cpp */,
+				64708E7128674A9700D7975D /* charobject.hpp */,
+				64708E7328674AFD00D7975D /* boatobject.cpp */,
+				64708E7428674AFD00D7975D /* boatobject.hpp */,
+				64708E7628674B3B00D7975D /* spawnobject.cpp */,
+				64708E7728674B3B00D7975D /* spawnobject.hpp */,
+				641E646628663F490066121E /* shardblock.cpp */,
+				641E646728663F490066121E /* shardblock.hpp */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -340,10 +375,12 @@
 			files = (
 				641570AA286218B000156347 /* section.cpp in Sources */,
 				641570E32865CE5400156347 /* packet.cpp in Sources */,
+				64708E6C28674A3500D7975D /* multiobject.cpp in Sources */,
 				641570DF2864C2B600156347 /* account.cpp in Sources */,
 				641570862861F8CD00156347 /* main.cpp in Sources */,
 				6415714228660ECD00156347 /* uomap.cpp in Sources */,
 				6415714328660ECD00156347 /* artblock.cpp in Sources */,
+				64708E7528674AFD00D7975D /* boatobject.cpp in Sources */,
 				641570D92863CF2F00156347 /* servcfg.cpp in Sources */,
 				6415709A2861F93300156347 /* ip4addr.cpp in Sources */,
 				641570952861F91F00156347 /* bytebuffer.cpp in Sources */,
@@ -352,6 +389,7 @@
 				641570942861F91F00156347 /* secparser.cpp in Sources */,
 				641570AD28622BEB00156347 /* secgroup.cpp in Sources */,
 				6415714028660ECD00156347 /* terrainblock.cpp in Sources */,
+				64708E69286749D000D7975D /* itemobject.cpp in Sources */,
 				6415709B2861F93300156347 /* socket.cpp in Sources */,
 				641570ED2865D11300156347 /* baseobject.cpp in Sources */,
 				641570D328635B6100156347 /* uoworld.cpp in Sources */,
@@ -359,9 +397,13 @@
 				641570932861F91F00156347 /* strutil.cpp in Sources */,
 				6415713F28660ECD00156347 /* uopfile.cpp in Sources */,
 				641570A22861FF7500156347 /* uoxcfg.cpp in Sources */,
-				641570E72865CF1100156347 /* objfactory.cpp in Sources */,
+				641570E72865CF1100156347 /* objectfactory.cpp in Sources */,
+				64708E7228674A9700D7975D /* charobject.cpp in Sources */,
+				64708E6F28674A6000D7975D /* mobobject.cpp in Sources */,
 				6415713D28660ECD00156347 /* ultima_types.cpp in Sources */,
+				64708E7828674B3B00D7975D /* spawnobject.cpp in Sources */,
 				641570CD2862600100156347 /* dictionary.cpp in Sources */,
+				641E646828663F490066121E /* shardblock.cpp in Sources */,
 				6415714128660ECD00156347 /* multicollection.cpp in Sources */,
 				641570C728623C0100156347 /* uoxdata.cpp in Sources */,
 				641570A528620AF500156347 /* console.cpp in Sources */,
