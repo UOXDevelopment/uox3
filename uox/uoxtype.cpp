@@ -9,6 +9,7 @@
 //====================================================================================================
 // advancement_t
 //====================================================================================================
+//====================================================================================================
 advancement_t::advancement_t(const std::string &value): advancement_t() {
 	auto values = strutil::parse(value,",");
 	switch (values.size()){
@@ -28,5 +29,13 @@ advancement_t::advancement_t(const std::string &value): advancement_t() {
 		case 0:
 			break;
 	}
+}
+//====================================================================================================
+auto advancement_t::save(std::ostream &output) const ->void {
+	output <<"\tadvance = " <<level<<","<<failure<<","<<success ;
+	if (gain != 1){
+		output <<","<<gain ;
+	}
+	output <<"\n";
 }
 

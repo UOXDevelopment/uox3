@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <ostream>
 
 #include "uoxtype.hpp"
 #include "secparser.hpp"
@@ -38,6 +39,7 @@ struct skilldefentry_t {
 	std::string name ;
 	std::vector<advancement_t> advancement ;
 	skilldefentry_t() ;
+	auto save(std::ostream &output) const ->void ;
 };
 //====================================================================================================
 // skilldefinition_t
@@ -58,5 +60,6 @@ public:
 	auto clear() ->void ;
 	auto load(const std::filesystem::path &serverdata) ->bool ;
 	skilldefinition_t() ;
+	auto save(const std::filesystem::path &serverdata) const ->bool ;
 };
 #endif /* skills_hpp */

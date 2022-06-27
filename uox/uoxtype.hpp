@@ -7,6 +7,7 @@
 #include <cmath>
 #include <string>
 #include <limits>
+#include <ostream>
 //====================================================================================================
 // These define types we use thoughout the code
 // Note, we use int a lot, and expect the translation to occur from uodata/packet.
@@ -89,5 +90,6 @@ struct advancement_t {
 	int gain ;
 	advancement_t():level(0),success(0),failure(0),gain(1) {}
 	advancement_t(const std::string &value);
+	auto save(std::ostream &output) const ->void ;
 };
 #endif /* uoxtype_hpp */

@@ -8,6 +8,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <algorithm>
+#include <fstream>
 
 using namespace std::string_literals ;
 //====================================================================================================
@@ -79,6 +80,23 @@ skilldefentry_t::skilldefentry_t(){
 	delay = -1 ;
 	verb = "made";
 }
+//====================================================================================================
+auto skilldefentry_t::save(std::ostream &output) const ->void {
+	output <<"\tstrength = " << strength <<"\n";
+	output <<"\tdexterity = " << dexterity <<"\n";
+	output <<"\tintelligence = " << intelligence <<"\n";
+	if (delay!= -1){
+		output <<"\n\tdelay = " << delay <<"\n";
+	}
+	if (verb!= "made"){
+		output <<"\n\tverb = " << verb <<"\n\n";
+	}
+	for (auto &entry : advancement) {
+		entry.save(output) ;
+	}
+
+
+}
 
 //====================================================================================================
 // skilldefinition_t
@@ -138,4 +156,22 @@ auto skilldefinition_t::keyvalue(const std::string &key, const std::string &valu
 //====================================================================================================
 auto skilldefinition_t::endSection() ->void {
 	currentsection = nullptr ;
+}
+//====================================================================================================
+auto skilldefinition_t::save(const std::filesystem::path &serverdata) const ->bool {
+	auto path = serverdata / std::filesystem::path("skills.cfg") ;
+	auto output = std::ofstream(path.string());
+	auto rvalue = output.is_open() ;
+	if (rvalue){
+		for (const auto &[type,entry]:skill_definitions){
+			auto name = skilldefinition_t::nameFor(type) ;
+			if (!name.empty()){
+				output <<"[skill " << name <<"]\n{\n";
+				entry.save(output) ;
+				output <<"}\n\n";
+				output.flush();
+			}
+		}
+	}
+	return rvalue ;
 }
