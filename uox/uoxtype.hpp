@@ -83,10 +83,11 @@ struct srcdeslocation_t {
 };
 //==========================================================================================
 struct advancement_t {
-	int base ;
+	int level ;
 	int success ;
 	int failure;
 	int gain ;
-	advancement_t():base(0),success(0),failure(0),gain(1) {}
+	advancement_t():level(0),success(0),failure(0),gain(1) {}
+	advancement_t(const std::string &value);
 };
 #endif /* uoxtype_hpp */

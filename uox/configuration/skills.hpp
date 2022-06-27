@@ -5,29 +5,58 @@
 
 #include <cstdint>
 #include <string>
-//====================================================================================================
-// advance_t
-//====================================================================================================
-//====================================================================================================
-struct advance_t {
-	std::int32_t base ;
-	std::int32_t success ;
-	std::int32_t failure ;
-	std::int32_t gain ;
-	advance_t() ;
-};
+#include <vector>
+#include <map>
 
+#include "uoxtype.hpp"
+#include "secparser.hpp"
+
+struct section;
+
+enum class skilltype_t {
+	alchemey,anatomy,animallore,itemid,armslore,parrying,
+	begging,blacksmithing,bowcraft,peacemaking,camping,carpentry,
+	cartography,cooking,detectinghidden,enticement,evaluatingintel,healing,
+	fishing,forensics,herding,hiding,provocation,inscription,
+	lockpicking,magery,magicresistance,tatics,snooping,musicianship,
+	poisoning,archery,spiritspeak,stealing,tailoring,taming,
+	tasteid,tinkering,tracking,veterinary,swordsmanship,macefighting,
+	fencing,wrestling,lumberjacking,mining,meditation,stealth,
+	removetrap,necromancy,focus,chivalry,bushido,ninjitsu,
+	spellweaving,imbuing,mysticism,throwing
+};
 //====================================================================================================
-// skill_t
+// skilldefentry_t
 //====================================================================================================
 //====================================================================================================
-struct skill_t {
+struct skilldefentry_t {
 	std::int32_t strength ;
 	std::int32_t dexterity ;
 	std::int32_t intelligence ;
 	std::int32_t delay ;
 	std::string verb ;
 	std::string name ;
-	skill_t() ;
+	std::vector<advancement_t> advancement ;
+	skilldefentry_t() ;
+};
+//====================================================================================================
+// skilldefinition_t
+//====================================================================================================
+//====================================================================================================
+struct skilldefinition_t : public secparser {
+private:
+	skilldefentry_t *currentsection ;
+	auto startSection(const std::string &secline)->void final ;
+	auto keyvalue(const std::string &key, const std::string &value)->void final;
+	auto endSection() ->void final;
+
+public:
+	static const std::map<skilltype_t,std::string> skillnames ;
+	static auto nameFor(skilltype_t type) ->const std::string & ;
+	static auto typeFor(const std::string &name) ->skilltype_t ;
+	std::map<skilltype_t,skilldefentry_t> skill_definitions ;
+	auto clear() ->void ;
+	auto load(const std::filesystem::path &serverdata) ->bool ;
+	skilldefinition_t() ;
 };
 #endif /* skills_hpp */
