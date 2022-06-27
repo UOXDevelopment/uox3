@@ -16,7 +16,7 @@
 class section ;
 class objectfactory_t ;
 
-enum class objtype_t{base,item,mob,character,multi,boat,spawn} ;
+enum class objtype_t{base,item,mob,character,multi,boat,spawn,container} ;
 enum class objfeatures_t{temporary,enabled,total};
 //====================================================================================================
 struct baseobject_t {

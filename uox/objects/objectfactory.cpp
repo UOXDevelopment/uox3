@@ -9,10 +9,11 @@
 #include "charobject.hpp"
 #include "boatobject.hpp"
 #include "spawnobject.hpp"
-
+#include "containobject.hpp"
 
 #include <iostream>
 #include <algorithm>
+#include <fstream>
 
 using namespace std::string_literals ;
 //====================================================================================================
@@ -66,6 +67,7 @@ objectfactory_t::objectfactory_t() {
 	collections[objtype_t::character] = factory_collection() ;
 	collections[objtype_t::multi] = factory_collection() ;
 	collections[objtype_t::boat] = factory_collection() ;
+	collections[objtype_t::container] = factory_collection() ;
 }
 
 //===================================================================================================
@@ -234,6 +236,11 @@ auto objectfactory_t::startSection(const std::string &secline)->void{
 			ptr->serial = serial ;
 			item_serials.registerSerial(serial);
 			break;
+		case objtype_t::container:
+			ptr = new containobject_t() ;
+			ptr->serial = serial ;
+			item_serials.registerSerial(serial);
+			break;
 		default:
 			break;
 	}
@@ -260,7 +267,7 @@ auto objectfactory_t::endSection() ->void {
 
 //===================================================================================================
 auto objectfactory_t::load(const std::filesystem::path &worldpath) ->bool {
-	auto rvalue = processDirectory(worldpath,".wsf") ;
+	auto rvalue = processDirectory(worldpath,".uof") ;
 	// Ok, so we have created all the objects, we need to load them now!
 	if (rvalue) {
 		for (auto &sec:loaded_sections){
@@ -312,6 +319,9 @@ auto objectfactory_t::create(objtype_t type) ->baseobject_t * {
 			obj = new spawnobject_t() ;
 			obj->serial = item_serials.next();
 			break;
+		case objtype_t::container:
+			obj = new containobject_t() ;
+			obj->serial = item_serials.next();
 		default:
 			break;
 	}
@@ -319,4 +329,19 @@ auto objectfactory_t::create(objtype_t type) ->baseobject_t * {
 		collections[type].insert_or_assign(obj->serial, obj);
 	}
 	return obj ;
+}
+
+//===============================================================================================
+auto objectfactory_t::save(const std::filesystem::path &worldpath) const ->void {
+	for (const auto &[type,collection]:collections){
+		auto name = baseobject_t::nameForObjType(type) ;
+		auto path = worldpath / std::filesystem::path(name + ".uof"s) ;
+		
+		auto output = std::ofstream(path.string());
+		if (output.is_open()){
+			for (const auto &[serial,object]: collection){
+				object->save(output) ;
+			}
+		}
+	}
 }

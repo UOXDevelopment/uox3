@@ -44,6 +44,7 @@
 		64708E7228674A9700D7975D /* charobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7028674A9700D7975D /* charobject.cpp */; };
 		64708E7528674AFD00D7975D /* boatobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7328674AFD00D7975D /* boatobject.cpp */; };
 		64708E7828674B3B00D7975D /* spawnobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7628674B3B00D7975D /* spawnobject.cpp */; };
+		64708E7B2868933A00D7975D /* containobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E792868933900D7975D /* containobject.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,6 +138,8 @@
 		64708E7428674AFD00D7975D /* boatobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = boatobject.hpp; sourceTree = "<group>"; };
 		64708E7628674B3B00D7975D /* spawnobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = spawnobject.cpp; sourceTree = "<group>"; };
 		64708E7728674B3B00D7975D /* spawnobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = spawnobject.hpp; sourceTree = "<group>"; };
+		64708E792868933900D7975D /* containobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = containobject.cpp; sourceTree = "<group>"; };
+		64708E7A2868933900D7975D /* containobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = containobject.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +295,8 @@
 				64708E7428674AFD00D7975D /* boatobject.hpp */,
 				64708E7628674B3B00D7975D /* spawnobject.cpp */,
 				64708E7728674B3B00D7975D /* spawnobject.hpp */,
+				64708E792868933900D7975D /* containobject.cpp */,
+				64708E7A2868933900D7975D /* containobject.hpp */,
 				641E646628663F490066121E /* shardblock.cpp */,
 				641E646728663F490066121E /* shardblock.hpp */,
 			);
@@ -401,6 +406,7 @@
 				64708E7228674A9700D7975D /* charobject.cpp in Sources */,
 				64708E6F28674A6000D7975D /* mobobject.cpp in Sources */,
 				6415713D28660ECD00156347 /* ultima_types.cpp in Sources */,
+				64708E7B2868933A00D7975D /* containobject.cpp in Sources */,
 				64708E7828674B3B00D7975D /* spawnobject.cpp in Sources */,
 				641570CD2862600100156347 /* dictionary.cpp in Sources */,
 				641E646828663F490066121E /* shardblock.cpp in Sources */,

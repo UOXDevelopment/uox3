@@ -57,5 +57,6 @@ public:
 	auto remove(baseobject_t *object) ->void ;
 	auto create(objtype_t type) -> baseobject_t*;
 	auto load(const std::filesystem::path &worldpath) ->bool ;
+	auto save(const std::filesystem::path &worldpath) const ->void;
 };
 #endif /* objectfactory_hpp */

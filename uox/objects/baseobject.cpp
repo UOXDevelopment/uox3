@@ -18,7 +18,7 @@ const std::map<objtype_t,std::string> baseobject_t::object_names{
 	{objtype_t::base,"base"s},	{objtype_t::item,"item"s},
 	{objtype_t::mob,"mob"s},	{objtype_t::character,"character"s},
 	{objtype_t::multi,"multi"s},	{objtype_t::boat,"boat"s},
-	{objtype_t::spawn,"spawn"s}
+	{objtype_t::spawn,"spawn"s},	{objtype_t::container,"container"s}
 };
 //====================================================================================================
 auto baseobject_t::nameForObjType(objtype_t obj) ->const std::string& {
