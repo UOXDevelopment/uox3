@@ -45,6 +45,8 @@
 		64708E7528674AFD00D7975D /* boatobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7328674AFD00D7975D /* boatobject.cpp */; };
 		64708E7828674B3B00D7975D /* spawnobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7628674B3B00D7975D /* spawnobject.cpp */; };
 		64708E7B2868933A00D7975D /* containobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E792868933900D7975D /* containobject.cpp */; };
+		64708E7E2869F30E00D7975D /* titles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7C2869F30E00D7975D /* titles.cpp */; };
+		64708E812869F36E00D7975D /* skills.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7F2869F36E00D7975D /* skills.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +142,10 @@
 		64708E7728674B3B00D7975D /* spawnobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = spawnobject.hpp; sourceTree = "<group>"; };
 		64708E792868933900D7975D /* containobject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = containobject.cpp; sourceTree = "<group>"; };
 		64708E7A2868933900D7975D /* containobject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = containobject.hpp; sourceTree = "<group>"; };
+		64708E7C2869F30E00D7975D /* titles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = titles.cpp; sourceTree = "<group>"; };
+		64708E7D2869F30E00D7975D /* titles.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = titles.hpp; sourceTree = "<group>"; };
+		64708E7F2869F36E00D7975D /* skills.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = skills.cpp; sourceTree = "<group>"; };
+		64708E802869F36E00D7975D /* skills.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = skills.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,10 @@
 				641570DB2864897300156347 /* shardcfg.hpp */,
 				641570DD2864C2B600156347 /* account.cpp */,
 				641570DE2864C2B600156347 /* account.hpp */,
+				64708E7C2869F30E00D7975D /* titles.cpp */,
+				64708E7D2869F30E00D7975D /* titles.hpp */,
+				64708E7F2869F36E00D7975D /* skills.cpp */,
+				64708E802869F36E00D7975D /* skills.hpp */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -392,6 +402,7 @@
 				6415713E28660ECD00156347 /* tileinfo.cpp in Sources */,
 				641570D02862602100156347 /* dictsec.cpp in Sources */,
 				641570942861F91F00156347 /* secparser.cpp in Sources */,
+				64708E812869F36E00D7975D /* skills.cpp in Sources */,
 				641570AD28622BEB00156347 /* secgroup.cpp in Sources */,
 				6415714028660ECD00156347 /* terrainblock.cpp in Sources */,
 				64708E69286749D000D7975D /* itemobject.cpp in Sources */,
@@ -400,6 +411,7 @@
 				641570D328635B6100156347 /* uoworld.cpp in Sources */,
 				641570DC2864897300156347 /* shardcfg.cpp in Sources */,
 				641570932861F91F00156347 /* strutil.cpp in Sources */,
+				64708E7E2869F30E00D7975D /* titles.cpp in Sources */,
 				6415713F28660ECD00156347 /* uopfile.cpp in Sources */,
 				641570A22861FF7500156347 /* uoxcfg.cpp in Sources */,
 				641570E72865CF1100156347 /* objectfactory.cpp in Sources */,

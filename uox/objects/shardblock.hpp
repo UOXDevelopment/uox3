@@ -10,8 +10,8 @@
 
 #include "uoxtype.hpp"
 
-constexpr auto shardblockwidth = 32 ;
-constexpr auto shardblockheight = 32 ;
+constexpr auto shardblockwidth = 8 ;
+constexpr auto shardblockheight = 8 ;
 
 struct baseobject_t;
 
