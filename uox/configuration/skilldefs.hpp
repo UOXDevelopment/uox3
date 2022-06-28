@@ -62,7 +62,7 @@ public:
 	std::map<skilltype_t,skilldefentry_t> skill_definitions ;
 	auto clear() ->void ;
 	auto load(const std::filesystem::path &serverdata) ->bool ;
-	skilldefinition_t() ;
+	skilldefinition_t(const std::filesystem::path &serverdata = std::filesystem::path()) ;
 	auto save(const std::filesystem::path &serverdata) const ->bool ;
 	auto operator[](skilltype_t type) const ->const skilldefentry_t& ;
 	auto operator[](skilltype_t type)  -> skilldefentry_t& ;

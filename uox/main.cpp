@@ -14,6 +14,7 @@
 #include "uoworld.hpp"
 #include "account.hpp"
 #include "skilldefs.hpp"
+#include "attributedef.hpp"
 //===========================================================================================
 //	Forward declares
 //===========================================================================================
@@ -58,9 +59,10 @@ int main(int argc, const char * argv[]) {
 	//===========================================================
 	// load our server data
 	//============================================================
-	auto skilldefinition = skilldefinition_t() ;
-	skilldefinition.load(cfg.serverdata);
-	
+	auto skilldefinition = skilldefinition_t(cfg.serverdata) ;
+	auto attributedefinition = attribdefinition_t(cfg.serverdata);
+	attributedefinition.save(cfg.serverdata);
+	return 0 ;
 	auto serverdata = uoxdata() ;
 	if (!serverdata.load(cfg.serverdata)){
 		return EXIT_FAILURE;

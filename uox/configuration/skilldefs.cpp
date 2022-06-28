@@ -16,35 +16,35 @@ using namespace std::string_literals ;
 //====================================================================================================
 //====================================================================================================
 const std::map<skilltype_t,std::string> skilldefinition_t::skillnames{
-	{skilltype_t::alchemy,"alchemy"s},{skilltype_t::anatomy,"anatomy"s},
-	{skilltype_t::animallore,"animallore"s},{skilltype_t::itemid,"itemid"s},
-	{skilltype_t::armslore,"armslore"s},{skilltype_t::parrying,"parrying"s},
-	{skilltype_t::begging,"begging"s},{skilltype_t::blacksmithing,"blacksmithing"s},
-	{skilltype_t::bowcraft,"bowcraft"s},{skilltype_t::peacemaking,"peacemaking"s},
-	{skilltype_t::camping,"camping"s},{skilltype_t::carpentry,"carpentry"s},
+	{skilltype_t::alchemy,"alchemy"s},		{skilltype_t::anatomy,"anatomy"s},
+	{skilltype_t::animallore,"animallore"s},	{skilltype_t::itemid,"itemid"s},
+	{skilltype_t::armslore,"armslore"s},	{skilltype_t::parrying,"parrying"s},
+	{skilltype_t::begging,"begging"s},		{skilltype_t::blacksmithing,"blacksmithing"s},
+	{skilltype_t::bowcraft,"bowcraft"s},	{skilltype_t::peacemaking,"peacemaking"s},
+	{skilltype_t::camping,"camping"s},		{skilltype_t::carpentry,"carpentry"s},
 	{skilltype_t::cartography,"cartography"s},{skilltype_t::cooking,"cooking"s},
 	{skilltype_t::detectinghidden,"detectinghidden"s},{skilltype_t::enticement,"enticement"s},
 	{skilltype_t::evaluatingintel,"evaluatingintel"s},{skilltype_t::healing,"healing"s},
-	{skilltype_t::fishing,"fishing"s},{skilltype_t::forensics,"forensics"s},
-	{skilltype_t::herding,"herding"s},{skilltype_t::hiding,"hiding"s},
+	{skilltype_t::fishing,"fishing"s},		{skilltype_t::forensics,"forensics"s},
+	{skilltype_t::herding,"herding"s},		{skilltype_t::hiding,"hiding"s},
 	{skilltype_t::provocation,"provocation"s},{skilltype_t::inscription,"inscription"s},
 	{skilltype_t::lockpicking,"lockpicking"s},{skilltype_t::magery,"magery"s},
 	{skilltype_t::magicresistance,"magicresistance"s},{skilltype_t::tactics,"tactics"s},
-	{skilltype_t::snooping,"snooping"s},{skilltype_t::musicianship,"musicianship"s},
-	{skilltype_t::poisoning,"poisoning"s},{skilltype_t::archery,"archery"s},
+	{skilltype_t::snooping,"snooping"s},	{skilltype_t::musicianship,"musicianship"s},
+	{skilltype_t::poisoning,"poisoning"s},	{skilltype_t::archery,"archery"s},
 	{skilltype_t::spiritspeak,"spiritspeak"s},{skilltype_t::stealing,"stealing"s},
-	{skilltype_t::tailoring,"tailoring"s},{skilltype_t::taming,"taming"s},
-	{skilltype_t::tasteid,"tasteid"s},{skilltype_t::tinkering,"tinkering"s},
-	{skilltype_t::tracking,"tracking"s},{skilltype_t::veterinary,"veterinary"s},
+	{skilltype_t::tailoring,"tailoring"s},	{skilltype_t::taming,"taming"s},
+	{skilltype_t::tasteid,"tasteid"s},	{skilltype_t::tinkering,"tinkering"s},
+	{skilltype_t::tracking,"tracking"s},	{skilltype_t::veterinary,"veterinary"s},
 	{skilltype_t::swordsmanship,"swordsmanship"s},{skilltype_t::macefighting,"macefighting"s},
-	{skilltype_t::fencing,"fencing"s},{skilltype_t::wrestling,"wrestling"s},
+	{skilltype_t::fencing,"fencing"s},		{skilltype_t::wrestling,"wrestling"s},
 	{skilltype_t::lumberjacking,"lumberjacking"s},{skilltype_t::mining,"mining"s},
-	{skilltype_t::meditation,"meditation"s},{skilltype_t::stealth,"stealth"s},
-	{skilltype_t::removetrap,"removetrap"s},{skilltype_t::necromancy,"necromancy"s},
-	{skilltype_t::focus,"focus"s},{skilltype_t::chivalry,"chivalry"s},
-	{skilltype_t::bushido,"bushido"s},{skilltype_t::ninjitsu,"ninjitsu"s},
+	{skilltype_t::meditation,"meditation"s},	{skilltype_t::stealth,"stealth"s},
+	{skilltype_t::removetrap,"removetrap"s},	{skilltype_t::necromancy,"necromancy"s},
+	{skilltype_t::focus,"focus"s},		{skilltype_t::chivalry,"chivalry"s},
+	{skilltype_t::bushido,"bushido"s},		{skilltype_t::ninjitsu,"ninjitsu"s},
 	{skilltype_t::spellweaving,"spellweaving"s},{skilltype_t::imbuing,"imbuing"s},
-	{skilltype_t::mysticism,"mysticism"s},{skilltype_t::throwing,"throwing"s}
+	{skilltype_t::mysticism,"mysticism"s},	{skilltype_t::throwing,"throwing"s}
 };
 
 const std::filesystem::path skilldefinition_t::location = std::filesystem::path("configuration")/std::filesystem::path("settings") / std::filesystem::path("skills.cfg");
@@ -108,8 +108,11 @@ auto skilldefentry_t::size() const ->size_t {
 // skilldefinition_t
 //====================================================================================================
 //====================================================================================================
-skilldefinition_t::skilldefinition_t(){
+skilldefinition_t::skilldefinition_t(const std::filesystem::path &serverdata ){
 	currentsection = nullptr ;
+	if (!serverdata.empty()){
+		load(serverdata) ;
+	}
 }
 //====================================================================================================
 auto skilldefinition_t::clear() ->void {
@@ -119,8 +122,7 @@ auto skilldefinition_t::clear() ->void {
 //====================================================================================================
 auto skilldefinition_t::load(const std::filesystem::path &serverdata) ->bool {
 	clear() ;
-	auto path = serverdata / location ;
-	return processFile(path);
+	return processFile(serverdata / location);
 }
 
 //====================================================================================================
