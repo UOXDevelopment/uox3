@@ -1,6 +1,6 @@
 //Copyright © 2022 Charles Kerr. All rights reserved.
 
-#include "skills.hpp"
+#include "skilldefs.hpp"
 
 #include "section.hpp"
 #include "strutil.hpp"
@@ -47,7 +47,7 @@ const std::map<skilltype_t,std::string> skilldefinition_t::skillnames{
 	{skilltype_t::mysticism,"mysticism"s},{skilltype_t::throwing,"throwing"s}
 };
 
-std::filesystem::path skilldefinition_t::location = std::filesystem::path("configuration")/std::filesystem::path("settings") / std::filesystem::path("skills.cfg");
+const std::filesystem::path skilldefinition_t::location = std::filesystem::path("configuration")/std::filesystem::path("settings") / std::filesystem::path("skills.cfg");
 
 //====================================================================================================
 auto skilldefinition_t::nameFor(skilltype_t type) ->const std::string & {
@@ -98,8 +98,10 @@ auto skilldefentry_t::save(std::ostream &output) const ->void {
 	for (auto &entry : advancement) {
 		entry.save(output) ;
 	}
-
-
+}
+//====================================================================================================
+auto skilldefentry_t::size() const ->size_t {
+	return advancement.size();
 }
 
 //====================================================================================================

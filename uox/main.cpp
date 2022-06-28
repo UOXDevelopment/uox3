@@ -13,7 +13,7 @@
 #include "mapdef.hpp"
 #include "uoworld.hpp"
 #include "account.hpp"
-#include "skills.hpp"
+#include "skilldefs.hpp"
 //===========================================================================================
 //	Forward declares
 //===========================================================================================
@@ -38,11 +38,6 @@ int main(int argc, const char * argv[]) {
 		std::cerr << "Unable to load startup configuration: "<<configfile << std::endl;
 		return EXIT_FAILURE;
 	}
-	auto skills = skilldefinition_t() ;
-	if (skills.load(cfg.serverdata)){
-		skills.save(cfg.serverdata);
-	}
-	return 0 ;
 	//===========================================================
 	// load our server configuration
 	//============================================================
@@ -63,6 +58,9 @@ int main(int argc, const char * argv[]) {
 	//===========================================================
 	// load our server data
 	//============================================================
+	auto skilldefinition = skilldefinition_t() ;
+	skilldefinition.load(cfg.serverdata);
+	
 	auto serverdata = uoxdata() ;
 	if (!serverdata.load(cfg.serverdata)){
 		return EXIT_FAILURE;

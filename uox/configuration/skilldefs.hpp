@@ -1,7 +1,7 @@
 //Copyright © 2022 Charles Kerr. All rights reserved.
 
-#ifndef skills_hpp
-#define skills_hpp
+#ifndef skilldefs_hpp
+#define skilldefs_hpp
 
 #include <cstdint>
 #include <string>
@@ -41,6 +41,7 @@ struct skilldefentry_t {
 	std::vector<advancement_t> advancement ;
 	skilldefentry_t() ;
 	auto save(std::ostream &output) const ->void ;
+	auto size() const ->size_t ;
 };
 //====================================================================================================
 // skilldefinition_t
@@ -69,4 +70,4 @@ public:
 	auto operator[](skillid_t id)  -> skilldefentry_t& ;
 	auto size() const ->size_t;
 };
-#endif /* skills_hpp */
+#endif /* skilldefs_hpp */
