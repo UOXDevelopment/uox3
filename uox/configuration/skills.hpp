@@ -8,6 +8,7 @@
 #include <vector>
 #include <map>
 #include <ostream>
+#include <filesystem>
 
 #include "uoxtype.hpp"
 #include "secparser.hpp"
@@ -15,11 +16,11 @@
 struct section;
 
 enum class skilltype_t {
-	alchemey,anatomy,animallore,itemid,armslore,parrying,
+	alchemy,anatomy,animallore,itemid,armslore,parrying,
 	begging,blacksmithing,bowcraft,peacemaking,camping,carpentry,
 	cartography,cooking,detectinghidden,enticement,evaluatingintel,healing,
 	fishing,forensics,herding,hiding,provocation,inscription,
-	lockpicking,magery,magicresistance,tatics,snooping,musicianship,
+	lockpicking,magery,magicresistance,tactics,snooping,musicianship,
 	poisoning,archery,spiritspeak,stealing,tailoring,taming,
 	tasteid,tinkering,tracking,veterinary,swordsmanship,macefighting,
 	fencing,wrestling,lumberjacking,mining,meditation,stealth,
@@ -51,6 +52,7 @@ private:
 	auto startSection(const std::string &secline)->void final ;
 	auto keyvalue(const std::string &key, const std::string &value)->void final;
 	auto endSection() ->void final;
+	static const std::filesystem::path location ;
 
 public:
 	static const std::map<skilltype_t,std::string> skillnames ;
@@ -61,5 +63,10 @@ public:
 	auto load(const std::filesystem::path &serverdata) ->bool ;
 	skilldefinition_t() ;
 	auto save(const std::filesystem::path &serverdata) const ->bool ;
+	auto operator[](skilltype_t type) const ->const skilldefentry_t& ;
+	auto operator[](skilltype_t type)  -> skilldefentry_t& ;
+	auto operator[](skillid_t id) const ->const skilldefentry_t& ;
+	auto operator[](skillid_t id)  -> skilldefentry_t& ;
+	auto size() const ->size_t;
 };
 #endif /* skills_hpp */

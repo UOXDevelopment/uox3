@@ -16,7 +16,7 @@ using namespace std::string_literals ;
 //====================================================================================================
 //====================================================================================================
 const std::map<skilltype_t,std::string> skilldefinition_t::skillnames{
-	{skilltype_t::alchemey,"alchemey"s},{skilltype_t::anatomy,"anatomy"s},
+	{skilltype_t::alchemy,"alchemy"s},{skilltype_t::anatomy,"anatomy"s},
 	{skilltype_t::animallore,"animallore"s},{skilltype_t::itemid,"itemid"s},
 	{skilltype_t::armslore,"armslore"s},{skilltype_t::parrying,"parrying"s},
 	{skilltype_t::begging,"begging"s},{skilltype_t::blacksmithing,"blacksmithing"s},
@@ -29,7 +29,7 @@ const std::map<skilltype_t,std::string> skilldefinition_t::skillnames{
 	{skilltype_t::herding,"herding"s},{skilltype_t::hiding,"hiding"s},
 	{skilltype_t::provocation,"provocation"s},{skilltype_t::inscription,"inscription"s},
 	{skilltype_t::lockpicking,"lockpicking"s},{skilltype_t::magery,"magery"s},
-	{skilltype_t::magicresistance,"magicresistance"s},{skilltype_t::tatics,"tatics"s},
+	{skilltype_t::magicresistance,"magicresistance"s},{skilltype_t::tactics,"tactics"s},
 	{skilltype_t::snooping,"snooping"s},{skilltype_t::musicianship,"musicianship"s},
 	{skilltype_t::poisoning,"poisoning"s},{skilltype_t::archery,"archery"s},
 	{skilltype_t::spiritspeak,"spiritspeak"s},{skilltype_t::stealing,"stealing"s},
@@ -46,6 +46,9 @@ const std::map<skilltype_t,std::string> skilldefinition_t::skillnames{
 	{skilltype_t::spellweaving,"spellweaving"s},{skilltype_t::imbuing,"imbuing"s},
 	{skilltype_t::mysticism,"mysticism"s},{skilltype_t::throwing,"throwing"s}
 };
+
+std::filesystem::path skilldefinition_t::location = std::filesystem::path("configuration")/std::filesystem::path("settings") / std::filesystem::path("skills.cfg");
+
 //====================================================================================================
 auto skilldefinition_t::nameFor(skilltype_t type) ->const std::string & {
 	static auto emptystring  = std::string();
@@ -89,8 +92,9 @@ auto skilldefentry_t::save(std::ostream &output) const ->void {
 		output <<"\n\tdelay = " << delay <<"\n";
 	}
 	if (verb!= "made"){
-		output <<"\n\tverb = " << verb <<"\n\n";
+		output <<"\n\tverb = " << verb <<"\n";
 	}
+	output <<"\n";
 	for (auto &entry : advancement) {
 		entry.save(output) ;
 	}
@@ -113,7 +117,7 @@ auto skilldefinition_t::clear() ->void {
 //====================================================================================================
 auto skilldefinition_t::load(const std::filesystem::path &serverdata) ->bool {
 	clear() ;
-	auto path = serverdata / std::filesystem::path("skills.cfg") ;
+	auto path = serverdata / location ;
 	return processFile(path);
 }
 
@@ -134,7 +138,8 @@ auto skilldefinition_t::keyvalue(const std::string &key, const std::string &valu
 	if (currentsection){
 		auto lkey = strutil::lower(key) ;
 		if (key == "advance") {
-			
+			auto advance = advancement_t(value) ;
+			currentsection->advancement.push_back(advance);
 		}
 		else if (lkey == "strength"){
 			currentsection->strength = strutil::ston<int>(value) ;
@@ -159,7 +164,7 @@ auto skilldefinition_t::endSection() ->void {
 }
 //====================================================================================================
 auto skilldefinition_t::save(const std::filesystem::path &serverdata) const ->bool {
-	auto path = serverdata / std::filesystem::path("skills.cfg") ;
+	auto path = serverdata / location ;
 	auto output = std::ofstream(path.string());
 	auto rvalue = output.is_open() ;
 	if (rvalue){
@@ -174,4 +179,24 @@ auto skilldefinition_t::save(const std::filesystem::path &serverdata) const ->bo
 		}
 	}
 	return rvalue ;
+}
+//====================================================================================================
+auto skilldefinition_t::operator[](skilltype_t type) const ->const skilldefentry_t& {
+	return skill_definitions.at(type) ;
+}
+//====================================================================================================
+auto skilldefinition_t::operator[](skilltype_t type)  -> skilldefentry_t& {
+	return skill_definitions.at(type) ;
+}
+//====================================================================================================
+auto skilldefinition_t::operator[](skillid_t id) const ->const skilldefentry_t& {
+	return skill_definitions.at(static_cast<skilltype_t>(id)) ;
+}
+//====================================================================================================
+auto skilldefinition_t::operator[](skillid_t id)  -> skilldefentry_t& {
+	return skill_definitions.at(static_cast<skilltype_t>(id)) ;
+}
+//====================================================================================================
+auto skilldefinition_t::size() const ->size_t{
+	return skill_definitions.size();
 }

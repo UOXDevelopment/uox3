@@ -30,6 +30,7 @@ using height_t = std::int32_t ;
 using flag_t = std::uint64_t ;
 using layer_t = std::int32_t ;
 using altitude_t = std::int32_t ;
+using skillid_t = std::int32_t ;
 
 using coord_t = std::int32_t ;
 
