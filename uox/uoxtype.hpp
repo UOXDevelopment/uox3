@@ -37,6 +37,10 @@ using coord_t = std::int32_t ;
 constexpr auto invalid_tile = 0xFFFF ;
 constexpr auto invalid_texture = 0xffff ;
 
+constexpr auto invalid_altitude = -128 ;
+constexpr auto invalid_mapnum = -1 ;
+constexpr auto invalid_realm = -1 ;
+
 constexpr auto elev_cap = 127 ;
 constexpr auto max_weight = 255 ;
 
@@ -54,6 +58,9 @@ struct point3_t : public point_t {
 	point3_t():point_t(),z(0){}
 	point3_t(const point_t &value,coord_t z=0):point_t(value.x,value.y),z(z){}
 	point3_t(coord_t x,coord_t y, coord_t z=0):point_t(x,y),z(z) {}
+	auto operator==(const point3_t &rhs) const ->bool ;
+	auto operator==(const point_t &rhs) const ->bool ;
+	auto equal(const point3_t &rhs) const ->bool ;
 };
 //==========================================================================================
 struct rpoint3_t {
@@ -75,11 +82,18 @@ struct rpoint3_t {
 struct location_t : public point3_t {
 	coord_t mapnum ;
 	coord_t realm ;
-	location_t() : point3_t(),mapnum(0),realm(0){}
+	location_t() : point3_t(),mapnum(invalid_mapnum),realm(invalid_realm){}
+	location_t(const std::string &value);
+	location_t(coord_t x, coord_t y,coord_t z = invalid_altitude, coord_t mapnum = invalid_mapnum , coord_t realm = invalid_realm) ;
+	auto equal(const location_t &rhs) const ->bool ;
+	auto operator==(const location_t &rhs) const ->bool ;
+	auto operator==(const  point3_t &rhs) const ->bool ;
+	auto operator==(const point_t &rhs) const ->bool ;
+	auto description() const ->std::string ;
 };
 
 //==========================================================================================
-struct srcdeslocation_t {
+struct duallocation_t {
 	location_t source;
 	location_t destination ;
 };

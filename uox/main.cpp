@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <stdexcept>
 
 #include "uoxcfg.hpp"
 #include "servcfg.hpp"
@@ -15,6 +16,8 @@
 #include "account.hpp"
 #include "skilldefs.hpp"
 #include "attributedef.hpp"
+#include "telelocation.hpp"
+#include "golocation.hpp"
 //===========================================================================================
 //	Forward declares
 //===========================================================================================
@@ -56,13 +59,19 @@ int main(int argc, const char * argv[]) {
 		std::cerr << "Unable to set shard data locations for: "<< cfg.sharddata.string()<<std::endl;
 		return EXIT_FAILURE ;
 	}
+	try {
 	//===========================================================
 	// load our server data
 	//============================================================
-	auto skilldefinition = skilldefinition_t(cfg.serverdata) ;
-	auto attributedefinition = attribdefinition_t(cfg.serverdata);
-	attributedefinition.save(cfg.serverdata);
-	return 0 ;
+		auto skilldefinition = skilldefinition_t(cfg.serverdata) ;
+		auto attributedefinition = attribdefinition_t(cfg.serverdata);
+		auto teleportlocations = telelocation_t(cfg.serverdata);
+		auto golocations = golocation_t(cfg.serverdata);
+	}
+	catch(const std::exception &e){
+		std::cerr <<e.what();
+		return EXIT_FAILURE;
+	}
 	auto serverdata = uoxdata() ;
 	if (!serverdata.load(cfg.serverdata)){
 		return EXIT_FAILURE;

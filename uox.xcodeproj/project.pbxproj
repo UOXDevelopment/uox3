@@ -48,6 +48,8 @@
 		64708E7E2869F30E00D7975D /* titles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7C2869F30E00D7975D /* titles.cpp */; };
 		64708E812869F36E00D7975D /* skilldefs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E7F2869F36E00D7975D /* skilldefs.cpp */; };
 		64708E84286B214700D7975D /* attributedef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E82286B214700D7975D /* attributedef.cpp */; };
+		64708E8A286C647A00D7975D /* telelocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E88286C647A00D7975D /* telelocation.cpp */; };
+		64708E8D286C8FAD00D7975D /* golocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64708E8B286C8FAD00D7975D /* golocation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -149,6 +151,10 @@
 		64708E802869F36E00D7975D /* skilldefs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = skilldefs.hpp; sourceTree = "<group>"; };
 		64708E82286B214700D7975D /* attributedef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = attributedef.cpp; sourceTree = "<group>"; };
 		64708E83286B214700D7975D /* attributedef.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = attributedef.hpp; sourceTree = "<group>"; };
+		64708E88286C647A00D7975D /* telelocation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = telelocation.cpp; sourceTree = "<group>"; };
+		64708E89286C647A00D7975D /* telelocation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = telelocation.hpp; sourceTree = "<group>"; };
+		64708E8B286C8FAD00D7975D /* golocation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = golocation.cpp; sourceTree = "<group>"; };
+		64708E8C286C8FAD00D7975D /* golocation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = golocation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +253,10 @@
 				64708E802869F36E00D7975D /* skilldefs.hpp */,
 				64708E82286B214700D7975D /* attributedef.cpp */,
 				64708E83286B214700D7975D /* attributedef.hpp */,
+				64708E88286C647A00D7975D /* telelocation.cpp */,
+				64708E89286C647A00D7975D /* telelocation.hpp */,
+				64708E8B286C8FAD00D7975D /* golocation.cpp */,
+				64708E8C286C8FAD00D7975D /* golocation.hpp */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -396,6 +406,7 @@
 				641570AA286218B000156347 /* section.cpp in Sources */,
 				641570E32865CE5400156347 /* packet.cpp in Sources */,
 				64708E6C28674A3500D7975D /* multiobject.cpp in Sources */,
+				64708E8A286C647A00D7975D /* telelocation.cpp in Sources */,
 				641570DF2864C2B600156347 /* account.cpp in Sources */,
 				641570862861F8CD00156347 /* main.cpp in Sources */,
 				6415714228660ECD00156347 /* uomap.cpp in Sources */,
@@ -428,6 +439,7 @@
 				64708E7828674B3B00D7975D /* spawnobject.cpp in Sources */,
 				641570CD2862600100156347 /* dictionary.cpp in Sources */,
 				641E646828663F490066121E /* shardblock.cpp in Sources */,
+				64708E8D286C8FAD00D7975D /* golocation.cpp in Sources */,
 				6415714128660ECD00156347 /* multicollection.cpp in Sources */,
 				641570C728623C0100156347 /* uoxdata.cpp in Sources */,
 				641570A528620AF500156347 /* console.cpp in Sources */,
