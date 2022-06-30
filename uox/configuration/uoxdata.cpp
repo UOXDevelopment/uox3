@@ -3,7 +3,17 @@
 #include "uoxdata.hpp"
 
 #include <iostream>
+#include <stdexcept>
 
+using namespace std::string_literals;
+//====================================================================================================
+uoxdata::uoxdata(const std::filesystem::path &dataroot ){
+	if (!dataroot.empty()){
+		if (!load(dataroot)){
+			throw std::runtime_error("Error loading uoxdata: "s+dataroot.string());
+		}
+	}
+}
 //====================================================================================================
 auto uoxdata::load(const std::filesystem::path &dataroot) -> bool {
 	auto rvalue = true ;

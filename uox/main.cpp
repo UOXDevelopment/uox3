@@ -14,10 +14,12 @@
 #include "mapdef.hpp"
 #include "uoworld.hpp"
 #include "account.hpp"
+
 #include "skilldefs.hpp"
 #include "attributedef.hpp"
 #include "telelocation.hpp"
 #include "golocation.hpp"
+#include "oredef.hpp"
 //===========================================================================================
 //	Forward declares
 //===========================================================================================
@@ -34,74 +36,61 @@ int main(int argc, const char * argv[]) {
 	if (!arguments.empty()) {
 		configfile = arguments[0];
 	}
-	//===========================================================
-	// load our startup configuration
-	//============================================================
-	auto cfg = uoxcfg() ;
-	if (!cfg.load(configfile)){
-		std::cerr << "Unable to load startup configuration: "<<configfile << std::endl;
-		return EXIT_FAILURE;
-	}
-	//===========================================================
-	// load our server configuration
-	//============================================================
-	auto serverconfig = servercfg() ;
-	if (!serverconfig.load(cfg.serverdata)){
-		std::cerr << "Unable to load server configuration (configuration/system.cfg) at: "<<cfg.serverdata.string() << std::endl;
-		return EXIT_FAILURE;
-
-	}
-	//===========================================================
-	// set the shard paths
-	//============================================================
-	auto shardsetup = shardcfg() ;
-	if (!shardsetup.load(cfg.sharddata)){
-		std::cerr << "Unable to set shard data locations for: "<< cfg.sharddata.string()<<std::endl;
-		return EXIT_FAILURE ;
-	}
 	try {
-	//===========================================================
-	// load our server data
-	//============================================================
+		//===========================================================
+		// load our startup configuration
+		//============================================================
+		auto cfg = uoxcfg(configfile) ;
+		//===========================================================
+		// set the shard paths
+		//============================================================
+		auto shardsetup = shardcfg(cfg.sharddata) ;
+		//===========================================================
+		// load our server configuration
+		//============================================================
+		auto serverconfig = servercfg(cfg.serverdata) ;
+
+		auto serverdata = uoxdata(cfg.serverdata) ;
+		//===========================================================
+		// load our server data
+		//============================================================
 		auto skilldefinition = skilldefinition_t(cfg.serverdata) ;
 		auto attributedefinition = attribdefinition_t(cfg.serverdata);
 		auto teleportlocations = telelocation_t(cfg.serverdata);
 		auto golocations = golocation_t(cfg.serverdata);
+		auto oredefinition = oredef_t(cfg.serverdata);
+		//==============================================================
+		// load dictionaries
+		//===============================================================
+		auto babble = dictionary(cfg.serverdata);
+		// set the default language
+		babble.setDefault(serverconfig.serverlanguage);
+		std::cout <<"Loaded "<<babble.size() << " languages"<<std::endl;
+		//==============================================================
+		// load UOData
+		//===============================================================
+		auto mapdefinitions = mapdef(cfg.serverdata);
+		std::cout <<"Loaded " << mapdefinitions.size() << " map definitions." << std::endl;
+		
+		std::cout <<"Loading UO data (this may take a while)." << std::endl;
+		auto uomaps = uoworld() ;
+		if (!uomaps.load(cfg.serverdata,cfg.uodir,mapdefinitions) ){
+			std::cerr <<"Error loading UO data, check configuration/map.cfg or uo data location: " << cfg.uodir.string()<< std::endl;
+			return EXIT_FAILURE ;
+		}
+		std::cout <<"Loaded " << uomaps.size() << " maps" << std::endl;
+		
+		//=====================================================================
+		// setup accounts
+		//====================================================================
+		auto Account = account_t(shardsetup.paths[static_cast<int>(shardpaths::account)]);
+
 	}
 	catch(const std::exception &e){
-		std::cerr <<e.what();
-		return EXIT_FAILURE;
-	}
-	auto serverdata = uoxdata() ;
-	if (!serverdata.load(cfg.serverdata)){
-		return EXIT_FAILURE;
-	}
-	//==============================================================
-	// load dictionaries
-	//===============================================================
-	auto babble = dictionary(cfg.serverdata);
-	// set the default language
-	babble.setDefault(serverconfig.serverlanguage);
-	std::cout <<"Loaded "<<babble.size() << " languages"<<std::endl;
-	
-	//==============================================================
-	// load UOData
-	//===============================================================
-	auto mapdefinitions = mapdef(cfg.serverdata);
-	std::cout <<"Loaded " << mapdefinitions.size() << " map definitions." << std::endl;
-	
-	std::cout <<"Loading UO data (this may take a while)." << std::endl;
-	auto uomaps = uoworld() ;
-	if (!uomaps.load(cfg.serverdata,cfg.uodir,mapdefinitions) ){
-		std::cerr <<"Error loading UO data, check configuration/map.cfg or uo data location: " << cfg.uodir.string()<< std::endl;
+		std::cerr << e.what()<<std::endl;
 		return EXIT_FAILURE ;
 	}
-	std::cout <<"Loaded " << uomaps.size() << " maps" << std::endl;
-	
-	//=====================================================================
-	// setup accounts
-	//====================================================================
-	auto Account = account_t(shardsetup.paths[static_cast<int>(shardpaths::account)]);
+
 	return EXIT_SUCCESS;
 }
 

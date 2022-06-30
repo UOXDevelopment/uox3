@@ -13,7 +13,7 @@ class uoxdata {
 	
 public:
 	std::unordered_map<sectype_t, secgroup> contents ;
-	
+	uoxdata(const std::filesystem::path &dataroot = std::filesystem::path());
 	auto load(const std::filesystem::path &dataroot) -> bool ;
 	auto remove(sectype_t type) ->void ;
 	auto clear() ->void ;

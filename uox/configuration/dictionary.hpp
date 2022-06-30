@@ -169,6 +169,7 @@ enum UnicodeTypes {
 
 //====================================================================================================
 class dictionary : public secparser {
+	static const std::filesystem::path location;
 	// virtual overriden functions;
 	auto startSection(const std::string &secline)->void final ;
 	auto keyvalue(const std::string &key, const std::string &value)->void final;

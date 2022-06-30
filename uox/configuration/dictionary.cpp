@@ -77,7 +77,7 @@ const std::unordered_map<UnicodeTypes, DistinctLanguage> dictionary::unicode_to_
 };
 
 
-
+const std::filesystem::path dictionary::location = std::filesystem::path("dictionaries") ;
 
 //====================================================================================================
 auto dictionary::startSection(const std::string &secline)->void  {
@@ -128,14 +128,14 @@ dictionary::dictionary(const std::filesystem::path &basepath) {
 	default_language = DL_DEFAULT ;
 	if (!basepath.empty()){
 		if (!load(basepath)){
-			throw std::runtime_error("Error loading dictionarys");
+			throw std::runtime_error("Error loading dictionarys: "s + (basepath/location).string());
 		}
 	}
 }
 //====================================================================================================
 auto dictionary::load(const std::filesystem::path &basepath)->bool{
 	contents.clear() ;
-	auto root = basepath / std::filesystem::path("dictionary");
+	auto root = basepath / location;
 	for (const auto &[lang,code]:stringtolanguage){
 		auto path = root / std::filesystem::path("dictionary."s+lang);
 		processFile(path);
